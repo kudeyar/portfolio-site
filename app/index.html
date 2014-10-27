@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <html lang="ru-RU">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Мой сайт (дз1)</title>
+        <meta name="description" content="">
+        <meta name="keywords" content=""/>
+        <meta name="author" content=""/>
+
+        <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="bower_components/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+        <![endif]-->
+
+        <!-- Шапка -->
+        <header>
+            <img src="images/" alt="logo" class="logo">
+            <div class="socials">
+                <a href="" class="vk">Вконтакте</a>
+                <a href="" class="tw">Twitter</a>
+                <a href="" class="fb">Facebook</a>
+                <a href="" class="gt">Github</a>
+            </div>
+        </header>   
+
+        <!-- Главный контейнер -->
+        <div class="container">            
+            <!-- Сайдбар -->
+            <aside>
+                <!-- Блок с навигацией -->
+                <nav>
+                    <ul>
+                        <li><a href="">Обо мне</a></li>
+                        <li><a href="">Мои работы</a></li>
+                        <li><a href="">Связаться со мной</a></li>
+                    </ul>
+                </nav>
+                <!-- Контакты -->
+                <address>
+                  <h2>Контакты</h2> 
+                  <div class="mail">
+                     <span class="icon icon-mail"></span>
+                     <a href="mailto:kovaldn@gmail.com"></a>
+                  </div>
+                  <div class="phone">
+                     <span class="icon icon-phone"></span>
+                     <a href="tel:+78129892723"></a>
+                  </div>
+                  <div class="skype">
+                     <span class="icon icon-skype"></span>
+                     <a href="skype:skype_kdn?chat"></a>
+                  </div>
+                </address>
+            </aside>
+            
+            <!-- Главная область -->
+            <main>  
+                <!-- 1ый блок -->
+                <section>
+                    <h2>Основная информация</h2>
+                    <img src="images/iam.jpg" alt="" class="photo">
+                    <dl>
+                      <dt>Меня зовут:</dt>
+                      <dd>Иванов Андрей Степанович</dd>
+                      <dt>Мой возраст:</dt>
+                      <dd>25 лет</dd>
+                      <dt>Мой город:</dt>
+                      <dd>Санкт Петербург, Россия</dd>
+                      <dt>Моя специализация:</dt>
+                      <dd>FRONTEND разработчик</dd>
+                      <dt>Ключевые навыки:</dt>
+                      <dd class="skills">
+                          <span>html</span>
+                          <span>css</span>
+                          <span>javascript</span>
+                          <span>gulp</span>
+                          <span>git</span>
+                      </dd>
+                    </dl>                
+                </section>
+                <!-- 2ой блок -->
+                <section>
+                    <h2>Опыт работы</h2>
+                    <div class="item">
+                        <div class="icon icon-experience"></div>
+                        <div class="info-block">
+                            <p class="where">"ИП Боровицкий" - Продавец дисков</p>
+                            <p class="period">Сентябрь 2005 - Август 2008</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon icon-experience"></div>
+                        <div class="info-block">
+                            <p class="where">"ООО Системы безопастности" - Системный администратор</p>
+                            <p class="period">Июнь 2008 - Июль 2010</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- 3ий блок -->
+                <section>
+                    <h2>Образование</h2>
+                    <div class="item">
+                        <div class="icon icon-university"></div>
+                        <div class="info-block">
+                            <p class="where">Незаконченное высшее. СПБНИУ ИТМО</p>
+                            <p class="period">Октябрь 2012 - по настоящее время</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon icon-courses"></div>
+                        <div class="info-block">
+                            <p class="where">Курсы Loftschool</p>
+                            <p class="period">Ноябрь 2014 - по настоящее время</p>
+                        </div>
+                    </div>
+                </section>           
+            </main>
+        </div>
+        
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="scripts/main.js"></script>
+
+
+        <footer>
+            <p>©, Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
+        </footer>
+
+    </body>
+</html>
