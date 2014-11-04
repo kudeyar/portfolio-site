@@ -11,7 +11,9 @@
         <meta name="author" content=""/>
 
         <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+        <link rel="stylesheet" href="styles/grid.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/responsive.css">
 
         <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
@@ -22,13 +24,16 @@
 
         <!-- Шапка -->
         <header>
-            <img src="images/" alt="logo" class="logo">
-            <div class="socials">
-                <a href="" class="vk">Вконтакте</a>
-                <a href="" class="tw">Twitter</a>
-                <a href="" class="fb">Facebook</a>
-                <a href="" class="gt">Github</a>
+            <div class="container-big">
+              <img src="images/logo.png" alt="logo" class="logo">
+              <div class="socials">
+                  <a href="" class="vk">Вконтакте</a>
+                  <a href="" class="tw">Twitter</a>
+                  <a href="" class="fb">Facebook</a>
+                  <a href="" class="gt">Github</a>
+              </div>
             </div>
+            <div class="gline"></div>
         </header>   
 
         <!-- Главный контейнер -->
@@ -36,7 +41,7 @@
             <!-- Сайдбар -->
             <aside>
                 <!-- Блок с навигацией -->
-                <nav>
+                <nav class="box">
                     <ul>
                         <li><a href="">Обо мне</a></li>
                         <li><a href="">Мои работы</a></li>
@@ -44,19 +49,19 @@
                     </ul>
                 </nav>
                 <!-- Контакты -->
-                <address>
+                <address class="box">
                   <h2>Контакты</h2> 
                   <div class="mail">
                      <span class="icon icon-mail"></span>
-                     <a href="mailto:kovaldn@gmail.com"></a>
+                     <a href="mailto:kovaldn@gmail.com">kovaldn@gmail.com</a>
                   </div>
                   <div class="phone">
                      <span class="icon icon-phone"></span>
-                     <a href="tel:+78129892723"></a>
+                     <a href="tel:+78129892723">+78129892723</a>
                   </div>
                   <div class="skype">
                      <span class="icon icon-skype"></span>
-                     <a href="skype:skype_kdn?chat"></a>
+                     <a href="skype:skype_kdn?chat">skype_kdn</a>
                   </div>
                 </address>
             </aside>
@@ -64,9 +69,9 @@
             <!-- Главная область -->
             <main>  
                 <!-- 1ый блок -->
-                <section>
+                <section class="box">
                     <h2>Основная информация</h2>
-                    <img src="images/iam.jpg" alt="" class="photo">
+                    <img src="images/face.png" alt="" class="photo">
                     <dl>
                       <dt>Меня зовут:</dt>
                       <dd>Иванов Андрей Степанович</dd>
@@ -87,7 +92,7 @@
                     </dl>                
                 </section>
                 <!-- 2ой блок -->
-                <section>
+                <section class="box">
                     <h2>Опыт работы</h2>
                     <div class="item">
                         <div class="icon icon-experience"></div>
@@ -103,7 +108,7 @@
                             <p class="period">Июнь 2008 - Июль 2010</p>
                         </div>
                     </div>
-                </section>
+                </section class="box">
                 <!-- 3ий блок -->
                 <section>
                     <h2>Образование</h2>
@@ -123,15 +128,17 @@
                     </div>
                 </section>           
             </main>
-        </div>
-        
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="scripts/main.js"></script>
-
+        </div> 
 
         <footer>
-            <p>©, Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
+            <div class="gline"></div>
+            <div class="container">
+              <p>©, Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
+            </div>
         </footer>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="scripts/main.js"></script>
 
     </body>
 </html>
