@@ -1,8 +1,10 @@
 body{
 	background: url(../images/pattern.png) repeat;
-	margin-bottom: 80px;
+	margin-bottom: 110px;
 }
-
+.container {
+    width: 960px;
+  }
 
 
 /* Шапка*/
@@ -10,6 +12,7 @@ header{
 	height: 119px;
 	background-color: #eff3f7;
 	position: relative;
+	margin-bottom: 20px;
 }
 header .gline {
 	bottom: 0;
@@ -17,11 +20,11 @@ header .gline {
 header .logo{
 	float: left;
 	margin-top: 23px;
+	margin-left: -5px;
 }
 header .socials{
-	margin-left: -23px;
-	margin-top: 36px;
 	float: right;
+	margin-top: 36px;
 }
 /* Шапка - конец */
 
@@ -33,7 +36,7 @@ header .socials{
 	width: 47px;
 	text-indent: -9999px;
 	display: inline-block;
-	margin-left: 19px;
+	margin-left: 18px;
 	background: url(../images/socials.png) no-repeat;
 }
 .socials .vk{ background-position: -2px -3px;}
@@ -49,13 +52,16 @@ header .socials{
 .menu{
 	font-family: 'firasans_book';
 }
+.box.menu{
+	margin-bottom: 26px;
+}
 .menu ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 .menu ul li{
-	padding: 18px 4px;
+	padding: 20px 6px;
 	position: relative;
 }
 .menu ul li:first-child{
@@ -75,7 +81,7 @@ header .socials{
 	margin: 0 auto;
 }
 .menu ul li a{
-	font-size: 22px;
+	font-size: 20px;
 	text-decoration: none;
 	color: #959aa8;
 	margin-left: 20px;
@@ -88,6 +94,7 @@ header .socials{
 }
 .menu ul li.current a{
 	color: #f9fafb;
+	font-size: 22px;
 }
 /* Блок меню - конец */
 
@@ -104,7 +111,7 @@ header .socials{
 }
 .contacts .header h2{
 	font-size: 20px;
-	padding: 10px;
+	padding: 12px 17px 6px;
 	margin: 0;
 }
 .contacts.box{
@@ -120,10 +127,12 @@ header .socials{
 .contacts a{
 	color: white;
 	text-decoration: none;
-	margin-left: 10px;
+	margin-left: 15px;
+	vertical-align: top;
+	line-height: 1.3;
 }
 .contacts li{
-	padding: 10px 20px;
+	padding: 10px 0 3px 41px;
 }
 .contacts li.mail {
   	background-color: rgb( 65, 185, 212 );
@@ -151,36 +160,40 @@ header .socials{
 
 
 /* Страница "обо мне" */
+.about-me .box{
+	margin-bottom: 10px;
+}
 .about-icon{
 	background: url(../images/icon-set.png) no-repeat;
 	display: inline-block;
 	width: 41px;
-	
+	margin-bottom: 6px;
 }
-.icon-college{ background-position: 0 0; width: 41px; height: 23px; } 
+.icon-college{ background-position: 0 0; height: 23px; } 
 .icon-course{ background-position: 8px -73px; height: 32px; } 
-.icon-portfel{ background-position: 0 -155px; width: 32px; height: 30px; } 
+.icon-portfel{ background-position: 0 -155px; height: 30px; } 
 .about-me .photo{
 	float: left;
-	margin: 0 32px 0 40px;
+	margin: 4px 32px 0 40px;
 }
 .about-me h2{
 	border-bottom: 2px #3ba8c0 solid;
 	margin: 0 0 20px 0;
-	padding: 15px 23px;
+	padding: 19px 23px;
 	display: inline-block;
 	color: #3ba8c0;
 }
 .about-me .box{
-	padding: 0 0 18px 0;	
+	padding: 0;	
 }
 .about-me .item{
-	padding: 0 0 0 60px;
-	margin-bottom: 28px;
+	padding: 0 0 0 70px;
+	margin-bottom: 23px;
+	margin-top: 9px;
 }
 .about-me .info-block{
 	display: inline-block;
-	margin-left: 22px;
+	margin-left: 15px;
 }
 .about-me .info-block .where{
 	font-family: 'firasans_book';
@@ -192,6 +205,26 @@ header .socials{
 	font-size: 15px;
 	margin: 0;
 }
+.about-me dl{
+	margin-top: 2px;
+}
+.about-me .skills{
+	width: 188px;
+	line-height: 2.0;
+}
+.skills span {
+	font-family: 'ProximaNovaCondensedSemibold';
+	background-color: rgba(30, 103, 123, 0.431);
+	border-radius: 4px;
+	padding: 0 7px;
+	margin-right: 6px;
+	color: white;
+	display: inline-block;
+	line-height: 1.2;
+	min-width: 40px;
+	text-align: center;
+
+}
 /* Страница "обо мне" - конец */
 
 
@@ -200,7 +233,7 @@ header .socials{
 .box{
 	background: #eff3f7;
 	border-radius: 4px;
-	margin: 20px 0;
+	margin: 20px 0 35px;
 }
 .gline {
 	background-image: -moz-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
@@ -230,6 +263,6 @@ footer p{
 	color: #4a545d;
 	font-family: 'fira_sanslight';
 	font-size: 13px;
-	padding-top: 18px;
+	padding-top: 13px;
 }
 /* подвал - конец */ 

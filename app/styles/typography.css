@@ -29,46 +29,51 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ProximaNovaCondensedSemibold';
+    src: url('../fonts/proximanovacond-semibold.eot');
+    src: url('../fonts/proximanovacond-semibold.eot') format('embedded-opentype'),
+         url('../fonts/proximanovacond-semibold.woff2') format('woff2'),
+         url('../fonts/proximanovacond-semibold.woff') format('woff'),
+         url('../fonts/proximanovacond-semibold.ttf') format('truetype'),
+         url('../fonts/proximanovacond-semibold.svg#ProximaNovaCondensedSemibold') format('svg');
+}
+
+
 h2{
-	font-size: 27px;
-	font-family: 'firasans_book';	
+  font-size: 27px;
+  font-family: 'firasans_book'; 
 }
 
 h1, h2, h3 {
-	font-family: inherit;
-	font-weight: 500;
-	line-height: 1.1;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 dl{
-	color: #4a545d;
-	line-height: 2.1;
-	margin: 0;
-	width: 344px;
-	display: inline-block;
+  color: #4a545d;
+  line-height: 2.1;
+  margin: 0;
+  width: 344px;
+  display: inline-block;
 }
 dt{
-	font-family: 'fira_sansmedium';
-	font-size: 16px;
+  font-family: 'fira_sansmedium';
+  font-size: 16px;
 }
 
 dt {
-	float: left;
-	clear: left;
-	margin-right: 10px;
+  float: left;
+  clear: left;
+  margin-right: 10px;
 }
 dd{
-	font-family: 'firasans_book';	
-	font-size: 15px;
+  font-family: 'firasans_book'; 
+  font-size: 15px;
+  margin-bottom: 7px;
+  line-height: 2.2;
+  float: left;
+  margin-left: 0;
 }
 
-.skills span {
-  background-color: rgba(30, 103, 123, 0.431);
-  border-radius: 4px;
-  padding: 0 7px;
-  margin-right: 6px;
-  color: white;
-  display: inline-block;
-  line-height: 1.6;
-
-}
