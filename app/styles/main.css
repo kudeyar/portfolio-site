@@ -1,34 +1,33 @@
-
 body{
 	background: url(../images/pattern.png) repeat;
 	margin-bottom: 80px;
 }
+
+
+
+/* Шапка*/
 header{
 	height: 119px;
 	background-color: #eff3f7;
 	position: relative;
 }
-.gline {
-	background-image: -moz-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	background-image: -webkit-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	background-image: -ms-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	width: 100%;
-	height: 3px;
-	position: absolute;	
-}
 header .gline {
 	bottom: 0;
 }
-
 header .logo{
 	float: left;
 	margin-top: 23px;
 }
-.socials{
+header .socials{
 	margin-left: -23px;
 	margin-top: 36px;
 	float: right;
 }
+/* Шапка - конец */
+
+
+
+/* Блок социальных ссылок */
 .socials a{
 	height: 47px;
 	width: 47px;
@@ -42,44 +41,180 @@ header .logo{
 .socials .fb{ background-position: -140px -3px;}
 .socials .gt{ background-position: -209px -3px;}
 .socials a:hover{ background-position-y: -65px;}
+/* Блок социальных ссылок - конец */
 
 
-/*aside*/
-nav{
-	
+
+/* Блок меню */
+.menu{
+	font-family: 'firasans_book';
 }
-address.box{
+.menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu ul li{
+	padding: 18px 4px;
+	position: relative;
+}
+.menu ul li:first-child{
+	border-radius: 4px 4px 0 0;
+}
+.menu ul li:last-child:after{
+	height: 0;
+}
+.menu ul li:after{
+	content: "";
+	display: block;
+	width: 96%;
+	background: #3ba8c0;
+	height: 2px;
+	bottom: 0px;
+	position: absolute;
+	margin: 0 auto;
+}
+.menu ul li a{
+	font-size: 22px;
+	text-decoration: none;
+	color: #959aa8;
+	margin-left: 20px;
+}
+.menu ul li a:hover{
+	color: #3ba8c0;
+}
+.menu ul li.current{
+	background: #3ba8c0;
+}
+.menu ul li.current a{
+	color: #f9fafb;
+}
+/* Блок меню - конец */
+
+
+
+/* Блок контакты */
+.contacts{
+	font-style: normal;
+	font-family: 'firasans_book';
+}
+.contacts .header{
+	background: #3ba8c0;
+	border-radius: 4px 4px 0 0;
+}
+.contacts .header h2{
+	font-size: 20px;
+	padding: 10px;
+	margin: 0;
+}
+.contacts.box{
 	background: #3ba8c0;
 	border-radius: 4px;
 	color: white;
 }
-address a{
+.contacts ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.contacts a{
 	color: white;
+	text-decoration: none;
+	margin-left: 10px;
 }
-section {
-	background: #eff3f7;
+.contacts li{
+	padding: 10px 20px;
 }
+.contacts li.mail {
+  	background-color: rgb( 65, 185, 212 );
+}
+.contacts li.phone {
+  	background-color: rgb( 72, 203, 232 );
+}
+.contacts li.skype {
+  	background-color: rgb( 81, 218, 248 );
+}
+.contacts li:last-child{
+	border-radius: 0 0 4px 4px;
+}
+.contact-icon{
+	display: block;
+	background-image: url(../images/cont.png);
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.5;
+}
+.icon-mail{ background-position: 0 0; width: 21px; height: 16px; } 
+.icon-phone{ background-position: 0 -66px; width: 19px; height: 21px; } 
+.icon-skype{ background-position: 0 -137px; width: 20px; height: 20px; } 
+/* Блок контакты - конец*/
 
 
-/*main*/
-.photo{
+/* Страница "обо мне" */
+.about-icon{
+	background: url(../images/icon-set.png) no-repeat;
+	display: inline-block;
+	width: 41px;
+	
+}
+.icon-college{ background-position: 0 0; width: 41px; height: 23px; } 
+.icon-course{ background-position: 8px -73px; height: 32px; } 
+.icon-portfel{ background-position: 0 -155px; width: 32px; height: 30px; } 
+.about-me .photo{
 	float: left;
+	margin: 0 32px 0 40px;
 }
+.about-me h2{
+	border-bottom: 2px #3ba8c0 solid;
+	margin: 0 0 20px 0;
+	padding: 15px 23px;
+	display: inline-block;
+	color: #3ba8c0;
+}
+.about-me .box{
+	padding: 0 0 18px 0;	
+}
+.about-me .item{
+	padding: 0 0 0 60px;
+	margin-bottom: 28px;
+}
+.about-me .info-block{
+	display: inline-block;
+	margin-left: 22px;
+}
+.about-me .info-block .where{
+	font-family: 'firasans_book';
+	font-size: 16px;
+	margin: 0;
+}
+.about-me .info-block .period{
+	font-family: 'fira_sanslight';
+	font-size: 15px;
+	margin: 0;
+}
+/* Страница "обо мне" - конец */
 
-/*частые классы*/
+
+
+/* общие классы */
 .box{
 	background: #eff3f7;
 	border-radius: 4px;
+	margin: 20px 0;
 }
+.gline {
+	background-image: -moz-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	width: 100%;
+	height: 3px;
+	position: absolute;	
+}
+/* общие классы - конец */
 
 
 
-
-
-
-
-
-
+/* подвал */
 footer{
 	height: 80px;
 	background: #eff3f7;
@@ -87,37 +222,14 @@ footer{
     bottom:0;
     width: 100%;
 }
-
 footer .gline {
 	top: 0;
 }
-
 footer p{
 	text-align: center;
+	color: #4a545d;
+	font-family: 'fira_sanslight';
+	font-size: 13px;
+	padding-top: 18px;
 }
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== 
-
-/*
- * Image replacement
- */
-
-.ir {
-   /* background-color: transparent;
-    border: 0;
-    overflow: hidden;*/
-    /* IE 6/7 fallback */
-    /**text-indent: -9999px;*/
-}
-
-.ir:before {
-   /* content: "";
-    display: block;
-    width: 0;
-    height: 150%;*/
-}
+/* подвал - конец */ 

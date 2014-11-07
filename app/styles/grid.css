@@ -7,30 +7,23 @@ box-sizing: border-box;
 	width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 aside{
 	width: 257px;
 	float: left;
 	position: relative;
 	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
+	margin-right: 50px;
 }
 main{
-	width: 75%;
+	width: 650px;
 	float: left;
 	position: relative;
 	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 .clearfix:after,
 .container:after,
@@ -49,5 +42,6 @@ main{
 	display: table;
 	content: " ";
 }
+
 
 /*grid - end*/
