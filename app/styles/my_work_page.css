@@ -1,0 +1,35 @@
+.my-work .projects{
+	margin: 0 16px;
+}
+.my-work .item{
+	width: 183px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin: 10px;
+}
+.my-work .item img{
+	border: 2px solid #3ba8c0;
+	border-radius: 4px;
+}
+.my-work .item a{
+	color: #3ba8c0;
+	font-family: 'fira_sanslight_italic';
+	font-size: 13px;
+}
+.my-work .item p{
+	font-size: 15px;
+	margin: 5px 0;
+	line-height: 1.2;
+}
+.add-new-item{
+	background: url('../images/add-new.png') center 36px no-repeat;
+	border: dashed 1px #3ba8c0;
+	border-radius: 4px;
+	height: 133px;
+}
+.add-new-item p{
+	padding-top: 45%;
+	color: #3ba8c0;
+	font-size: 13px;
+}

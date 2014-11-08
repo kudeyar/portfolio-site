@@ -1,35 +1,24 @@
 'use strict';
 
 var gulp = require('gulp'),
-    connect = require('gulp-connect');
-
-// server connect 
-gulp.task('connect', function() {
-  connect.server({
-    root: 'app',
-    livereload: true
-  });
-  require('opn')('http://localhost:8080');
-});
+    livereload = require('gulp-livereload');
 
 // css
 gulp.task('css', function () {
-    gulp.src('app/styles/*.css')
-    .pipe(connect.reload());
+    livereload.changed();
 });
 
-// html
-gulp.task('html', function () {
-    gulp.src('app/*.html')
-    .pipe(connect.reload());
+// php
+gulp.task('php', function () {
+    livereload.changed();
 })
 
 // watch
 gulp.task('watch', function () {
+    livereload.listen();
     gulp.watch('app/styles/*.css', ['css'])
-    gulp.watch('app/*.html', ['html'])
+    gulp.watch('app/*.php', ['php'])
 })
 
 // default
-gulp.task('default', ['connect', 'html', 'css', 'watch']);
-
+gulp.task('default', ['watch']);

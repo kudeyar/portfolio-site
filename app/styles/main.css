@@ -2,9 +2,26 @@ body{
 	background: url(../images/pattern.png) repeat;
 	margin-bottom: 110px;
 }
+html {
+    overflow-y:scroll;
+}
+h2{
+  font-size: 27px;
+  font-family: 'fira_sansbook';
+}
+
+h1, h2, h3 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+p{
+    font-family: 'fira_sanslight';
+    color: #4a545d;
+}
 .container {
     width: 960px;
-  }
+}
 
 
 /* Шапка*/
@@ -47,10 +64,21 @@ header .socials{
 /* Блок социальных ссылок - конец */
 
 
+/* Сайдбар */
+.sidebar{
+	width: 257px;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	margin-right: 53px;
+}
+/* Сайдбар - конец */
+
+
 
 /* Блок меню */
 .menu{
-	font-family: 'firasans_book';
+	font-family: 'fira_sansbook';
 }
 .box.menu{
 	margin-bottom: 26px;
@@ -61,25 +89,30 @@ header .socials{
 	padding: 0;
 }
 .menu ul li{
-	padding: 20px 6px;
+	padding: 20px 4px;
 	position: relative;
+	margin: 0 4px;
+	border-bottom: 2px solid #3ba8c0;
 }
-.menu ul li:first-child{
+/*.menu ul li:first-child{
 	border-radius: 4px 4px 0 0;
-}
-.menu ul li:last-child:after{
+}*/
+/*.menu ul li:last-child:after, .menu ul li.current:after{
 	height: 0;
+}*/
+.menu ul li:last-child{
+	border-bottom: none;
 }
-.menu ul li:after{
+/*.menu ul li:after{
 	content: "";
 	display: block;
 	width: 96%;
 	background: #3ba8c0;
 	height: 2px;
-	bottom: 0px;
+	bottom: 0;
 	position: absolute;
 	margin: 0 auto;
-}
+}*/
 .menu ul li a{
 	font-size: 20px;
 	text-decoration: none;
@@ -91,6 +124,18 @@ header .socials{
 }
 .menu ul li.current{
 	background: #3ba8c0;
+	margin: 0;
+	border-bottom: none;
+	margin-top: -2px;
+	padding-left: 6px;
+}
+.menu ul li.current:first-child{
+	margin-top: 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.menu ul li.current:last-child{
+	border-radius: 0 0 4px 4px;
 }
 .menu ul li.current a{
 	color: #f9fafb;
@@ -103,7 +148,7 @@ header .socials{
 /* Блок контакты */
 .contacts{
 	font-style: normal;
-	font-family: 'firasans_book';
+	font-family: 'fira_sansbook';
 }
 .contacts .header{
 	background: #3ba8c0;
@@ -159,73 +204,47 @@ header .socials{
 /* Блок контакты - конец*/
 
 
-/* Страница "обо мне" */
-.about-me .box{
-	margin-bottom: 10px;
-}
-.about-icon{
-	background: url(../images/icon-set.png) no-repeat;
-	display: inline-block;
-	width: 41px;
-	margin-bottom: 6px;
-}
-.icon-college{ background-position: 0 0; height: 23px; } 
-.icon-course{ background-position: 8px -73px; height: 32px; } 
-.icon-portfel{ background-position: 0 -155px; height: 30px; } 
-.about-me .photo{
+
+/* Главная область */
+.main{
+	width: 650px;
 	float: left;
-	margin: 4px 32px 0 40px;
+	position: relative;
+	min-height: 1px;
 }
-.about-me h2{
+.main .box{
+	margin-bottom: 10px;
+	padding: 0;	
+}
+.main h2{
 	border-bottom: 2px #3ba8c0 solid;
 	margin: 0 0 20px 0;
 	padding: 19px 23px;
 	display: inline-block;
 	color: #3ba8c0;
 }
-.about-me .box{
-	padding: 0;	
-}
-.about-me .item{
-	padding: 0 0 0 70px;
-	margin-bottom: 23px;
-	margin-top: 9px;
-}
-.about-me .info-block{
-	display: inline-block;
-	margin-left: 15px;
-}
-.about-me .info-block .where{
-	font-family: 'firasans_book';
-	font-size: 16px;
-	margin: 0;
-}
-.about-me .info-block .period{
-	font-family: 'fira_sanslight';
-	font-size: 15px;
-	margin: 0;
-}
-.about-me dl{
-	margin-top: 2px;
-}
-.about-me .skills{
-	width: 188px;
-	line-height: 2.0;
-}
-.skills span {
-	font-family: 'ProximaNovaCondensedSemibold';
-	background-color: rgba(30, 103, 123, 0.431);
-	border-radius: 4px;
-	padding: 0 7px;
-	margin-right: 6px;
-	color: white;
-	display: inline-block;
-	line-height: 1.2;
-	min-width: 40px;
-	text-align: center;
+/* Главная область - конец */
 
+
+/* подвал */
+.footer-page{
+	height: 80px;
+	background: #eff3f7;
+	position:fixed;
+    bottom:0;
+    width: 100%;
 }
-/* Страница "обо мне" - конец */
+.footer-page .gline {
+	top: 0;
+}
+.footer-page p{
+	text-align: center;
+	color: #4a545d;
+	font-family: 'fira_sanslight';
+	font-size: 13px;
+	padding-top: 13px;
+}
+/* подвал - конец */ 
 
 
 
@@ -244,25 +263,3 @@ header .socials{
 	position: absolute;	
 }
 /* общие классы - конец */
-
-
-
-/* подвал */
-footer{
-	height: 80px;
-	background: #eff3f7;
-	position:fixed;
-    bottom:0;
-    width: 100%;
-}
-footer .gline {
-	top: 0;
-}
-footer p{
-	text-align: center;
-	color: #4a545d;
-	font-family: 'fira_sanslight';
-	font-size: 13px;
-	padding-top: 13px;
-}
-/* подвал - конец */ 

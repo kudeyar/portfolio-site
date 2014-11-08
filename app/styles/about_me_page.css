@@ -1,0 +1,78 @@
+/* Страница "обо мне" */
+
+
+
+.about-icon{
+	background: url(../images/icon-set.png) no-repeat;
+	display: inline-block;
+	width: 41px;
+	margin-bottom: 6px;
+}
+.icon-college{ background-position: 0 0; height: 23px; } 
+.icon-course{ background-position: 8px -73px; height: 32px; } 
+.icon-portfel{ background-position: 0 -155px; height: 30px; } 
+.about-me .photo{
+	float: left;
+	margin: 4px 32px 0 40px;
+}
+
+.about-me .item{
+	padding: 0 0 0 70px;
+	margin-bottom: 23px;
+	margin-top: 9px;
+}
+.about-me .info-block{
+	display: inline-block;
+	margin-left: 15px;
+}
+.about-me .info-block .where{
+	font-family: 'fira_sansbook';
+	font-size: 16px;
+	margin: 0;
+}
+.about-me .info-block .period{
+	font-family: 'fira_sanslight';
+	font-size: 15px;
+	margin: 0;
+}
+.about-me .dl-horizontal{
+	margin-top: 2px;
+}
+.dl-horizontal{
+  color: #4a545d;
+  line-height: 2.1;
+  margin: 0;
+  width: 344px;
+  display: inline-block;
+}
+.dl-horizontal dt{
+  font-family: 'fira_sansmedium';
+  font-size: 16px;
+  float: left;
+  clear: left;
+  margin-right: 10px;
+}
+.dl-horizontal dd{
+  font-family: 'fira_sansbook'; 
+  font-size: 15px;
+  margin-bottom: 7px;
+  line-height: 2.2;
+  float: left;
+  margin-left: 0;
+}
+.about-me .skills{
+	width: 188px;
+	line-height: 2.0;
+}
+.skills span {
+	font-family: 'ProximaNovaCondensedSemibold';
+	background-color: rgba(30, 103, 123, 0.431);
+	border-radius: 4px;
+	padding: 0 7px;
+	margin-right: 6px;
+	color: white;
+	display: inline-block;
+	line-height: 1.2;
+	min-width: 40px;
+	text-align: center;
+}

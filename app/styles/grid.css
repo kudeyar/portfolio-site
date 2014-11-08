@@ -12,19 +12,14 @@ box-sizing: border-box;
 	margin-right: auto;
 	margin-left: auto;
 }
-aside{
+.sidebar{
 	width: 257px;
 	float: left;
 	position: relative;
 	min-height: 1px;
 	margin-right: 53px;
 }
-.about-me{
-	width: 650px;
-	float: left;
-	position: relative;
-	min-height: 1px;
-}
+
 .clearfix:after,
 .container:after,
 .container-fluid:after,
@@ -42,6 +37,3 @@ aside{
 	display: table;
 	content: " ";
 }
-
-
-/*grid - end*/
