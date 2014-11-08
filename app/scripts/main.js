@@ -2,32 +2,33 @@
   
 	var app = {
 		
-		initialize : function () {			
-			this.modules();
+		// Инициализация
+		initialize : function () {
 			this.setUpListeners();
-
 			console.log('init');
-
 		},
 
-		modules: function () {
-
-		},
-
+		// Подключаем прослушку событий
 		setUpListeners: function () {
 			$('.add-new-item').on('click', app.showModal);
 			$('#add-new-project').on('submit', app.addProject);
 		},
 
-		showModal: function (ev) {
-			 ev.preventDefault();
+		// Вызов модального окна
+		showModal: function () {
+			 // Подключаем плагин bPopup
 			 $('#new-progect-popup').bPopup({
 			 	speed: 650,
 		        transition: 'slideIn',
-			    transitionClose: 'slideBack'
+			    transitionClose: 'slideBack',
+			    onClose: function () {
+			    	// При закрытии плагина очищаем форму
+			    	this.find('.form').trigger("reset");
+			    }
 			 });
 		},
 
+		// Отправляем запрос на сервер в базу данных
 		addProject: function (ev) {
 			ev.preventDefault();
 
@@ -36,6 +37,7 @@
 
 			console.log(data);
 
+			// Здесь не понятно, как отправлять файл
 			$.ajax({
 				url: 'ajax.php',
 				type: 'POST',
