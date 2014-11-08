@@ -61,6 +61,11 @@
     </div>
 </div> 
 
+<!-- Подключаем модальное окно -->
+<?php
+  include "popup-add-project.php";
+?> 
+
 <!-- Подключаем футер -->
 <?php
   include "footer.php";

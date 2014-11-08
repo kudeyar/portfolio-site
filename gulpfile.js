@@ -13,12 +13,18 @@ gulp.task('php', function () {
     livereload.changed();
 })
 
+// js
+gulp.task('js', function () {
+    livereload.changed();
+});
+
 // watch
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('app/styles/*.css', ['css'])
-    gulp.watch('app/*.php', ['php'])
-})
+    gulp.watch('app/styles/*.css', ['css']);
+    gulp.watch('app/scripts/*.js', ['js']);
+    gulp.watch('app/*.php', ['php']);
+});
 
 // default
 gulp.task('default', ['watch']);

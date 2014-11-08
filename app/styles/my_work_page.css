@@ -27,9 +27,15 @@
 	border: dashed 1px #3ba8c0;
 	border-radius: 4px;
 	height: 133px;
+	cursor: pointer;
 }
 .add-new-item p{
 	padding-top: 45%;
 	color: #3ba8c0;
 	font-size: 13px;
+}
+
+#new-progect-popup { display:none; }
+.modal-wrapper{
+	background: #eff3f7;
 }
