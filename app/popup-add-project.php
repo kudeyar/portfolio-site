@@ -1,16 +1,16 @@
 <div id="new-progect-popup">
   <div class="modal-wrapper">
     <div class="modal-header">
-      <button type="button" class="close"><span class="sr-only">Close</span></button>
-      <h4 class="modal-title">Modal title</h4>
+      <button type="button" class="b-close"></button>
+      <h4 class="modal-title">Добавление проекта</h4>
     </div>
 
     <div class="modal-body">
-      <form class="form" role="form">   
+      <form id="add-new-project" class="form" role="form">   
       <!-- Название проекта -->
       <div class="form-group">
         <label for="projectName" class="label">Название проекта</label>
-        <input type="password" name="projectName" class="input" id="projectName" placeholder="Введите название">
+        <input type="text" name="projectName" class="input" id="projectName" placeholder="Введите название">
       </div>
       <!-- Картинка проекта -->
       <div class="form-group">
@@ -20,15 +20,17 @@
       <!-- URL проекта -->
       <div class="form-group">
         <label for="projectUrl" class="label">URL проекта</label>
-        <input type="password" name="projectUrl" class="form-control" id="projectUrl" placeholder="Добавьте ссылку">
+        <input type="text" name="projectUrl" class="input" id="projectUrl" placeholder="Добавьте ссылку">
       </div>
       <!-- Описание -->
       <div class="form-group">
         <label for="projectDesc" class="label">Описание</label>
-        <textarea name="text" id="projectDesc" cols="30" rows="10" placeholder="Пара слов о вашем проекте"></textarea>
+        <textarea name="text" id="projectDesc" class="textarea" rows="3" placeholder="Пара слов о вашем проекте"></textarea>
       </div>
       <!-- Кнопка "Отправить" -->
-      <button type="button" class="btn">Отправить</button>
+        <div class="text-center">
+          <button type="submit" class="btn">Добавить</button>
+        </div>      
       </form>
     </div>
   </div>
