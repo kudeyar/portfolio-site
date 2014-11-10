@@ -1,0 +1,22 @@
+AddDefaultCharset UTF-8
+php_value register_globals 0
+php_value magic_quotes_gpc off
+
+Options FollowSymLinks
+Options +Indexes
+
+DirectoryIndex app/main.php
+ErrorDocument 404 app/404.html
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^my-work/?$ app/main.php?page=my-work
+
+<FilesMatch "node_modules">
+    Order Deny,Allow
+    Deny from All
+</FilesMatch>
+
