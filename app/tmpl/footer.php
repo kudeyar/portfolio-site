@@ -10,6 +10,7 @@
     <script src="/app/bower_components/jquery/dist/jquery.js"></script>
     <script src="/app/bower_components/bpopup/jquery.bpopup.js"></script>
     <script src="/app/bower_components/qtip2/jquery.qtip.js"></script>
+    <script src="/app/scripts/ajaxupload.js"></script>
     <script src="/app/scripts/main.js"></script>
 
 </body>

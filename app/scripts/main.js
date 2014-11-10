@@ -15,7 +15,30 @@
 			$('form').on('keydown', '.has-error', app.removeError);
 			$('#add-new-project').on('submit', app.addProject);
 			$('#login').on('submit', app.login);
-		},
+
+            var fileupload = $('#fileupload');
+            new AjaxUpload(fileupload, {
+                action: "/app/upload.php",
+                name: "userfile",
+                autoSubmit: true,
+                onSubmit: function(file, ext){
+                    fileupload.text("Загрузка");
+                    this.disable();
+                },
+                onComplete: function(file, response){
+                    var otvet = JSON.parse(response);
+                    console.log(otvet);
+                    if(otvet.message == "ОК"){
+                        fileupload.text('Файл загружен');
+                        $('#fileurl').val(otvet.url);
+                    }else{
+                        fileupload.text(otvet.message);
+                    }
+                    this.enable();
+                }
+            });
+
+        },
 
 		removeError: function() {
 			$(this).removeClass('has-error');
@@ -53,7 +76,10 @@
 			$.ajax({
 				url: '/app/login_server.php',
 				type: 'POST',
-				data: data
+				data: data,
+                success: function(data){
+                    console.log('конец загрузки проекта');
+                }
 			})
 			.done(function(ans) {
                 console.log(ans);
@@ -80,6 +106,8 @@
 			var form = $(this),
 				data = form.serialize();
 
+
+
 			console.log(data);
 			
 			if (!app.validateForm(form)) {
@@ -88,18 +116,19 @@
 
 			// Здесь не понятно, как отправлять файл
 			$.ajax({
-				url: 'ajax.php',
+				url: '/app/ajax.php',
 				type: 'POST',
-				data: data,
+				data: data
+
 			})
 			.done(function() {
-				// console.log("success");
+				 console.log("success");
 			})
 			.fail(function() {
 				// console.log("error");
 			})
 			.always(function() {
-				// console.log("complete");
+				console.log("complete");
 			});	
 		},
 
