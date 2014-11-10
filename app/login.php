@@ -1,7 +1,7 @@
 <!-- Подключаем head и header -->
 <?php
   $title = 'Обо мне';
-  include "head.php";
+  include "tmpl/head.php";
 ?>  
 
 <!-- Главный контейнер -->
@@ -31,5 +31,5 @@
 
 <!-- Подключаем футер -->
 <?php
-  include "footer.php";
+  include "tmpl/footer.php";
 ?> 

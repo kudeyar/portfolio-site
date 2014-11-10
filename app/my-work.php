@@ -2,8 +2,8 @@
 <?php
   $page = 'my-work';
   $title = 'Мои работы';
-  include "head.php";
-  include "header.php";
+  include "tmpl/head.php";
+  include "tmpl/header.php";
 ?>  
     
 <!-- Главный контейнер -->
@@ -11,7 +11,7 @@
     
     <!-- Подключаем сайдбар -->
     <?php
-      include "sidebar.php";
+      include "tmpl/sidebar.php";
     ?>  
     
     <!-- Главная область -->
@@ -97,10 +97,10 @@
 
 <!-- Подключаем модальное окно -->
 <?php
-  include "popup-add-project.php";
+  include "tmpl/popup-add-project.php";
 ?> 
 
 <!-- Подключаем футер -->
 <?php
-  include "footer.php";
+  include "tmpl/footer.php";
 ?> 

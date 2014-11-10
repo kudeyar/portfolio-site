@@ -2,8 +2,8 @@
 <?php
   $page = 'contact-me';
   $title = 'Связаться со мной';
-  include "head.php";
-  include "header.php";
+  include "tmpl/head.php";
+  include "tmpl/header.php";
 ?>  
     
 <!-- Главный контейнер -->
@@ -11,7 +11,7 @@
     
     <!-- Подключаем сайдбар -->
     <?php
-      include "sidebar.php";
+      include "tmpl/sidebar.php";
     ?>  
     
     <!-- Главная область -->
@@ -26,5 +26,5 @@
 
 <!-- Подключаем футер -->
 <?php
-  include "footer.php";
+  include "tmpl/footer.php";
 ?> 
