@@ -11,7 +11,7 @@
     <meta name="author" content=""/>
 
     <!-- normalize -->
-    <link rel="stylesheet" href="/app/bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="/app/bower_components/normalize.css" />
 
     <!-- Шрифты -->
     <link rel="stylesheet" href="/app/fonts/fira.css">
