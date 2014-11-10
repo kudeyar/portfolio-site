@@ -51,13 +51,15 @@
 			}
 
 			$.ajax({
-				url: 'login_server.php',
+				url: '/app/login_server.php',
 				type: 'POST',
-				data: data,
+				data: data
 			})
 			.done(function(ans) {
+                console.log(ans);
+
 				if (ans === "OK") {
-					alert('Вы вошли!');
+					window.location.href = '/';
 				}else{
 					alert('Сервер вас не пускает!');
 				}

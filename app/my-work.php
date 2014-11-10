@@ -37,12 +37,13 @@
               </div>
              <?php endforeach; ?>
 
+            <?php if($_SESSION['auth']): ?>
               <!-- Добавить новый проект -->
               <a href="#" class="item add-new-item">
                 <div class="icon-add"></div>
                 <span>Добавить проект</span>
               </a>
-
+            <?php endif; ?>
             </div>
 
         </section>           

@@ -10,7 +10,9 @@ switch($page){
         $data['portfolio'] = getDataAsArray($pdo, $data_sql['getPortfolio']);
         require_once 'my-work.php';
         break;
-
+    case 'admin':
+        require_once 'login.php';
+        break;
     default:
         $data['title'] = "Сайт веб-дизайнера";
         $data['page'] = "about-me";
