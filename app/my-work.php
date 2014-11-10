@@ -2,6 +2,7 @@
 <?php
   $page = 'my-work';
   $title = 'Мои работы';
+  include "head.php";
   include "header.php";
 ?>  
     

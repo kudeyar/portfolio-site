@@ -153,7 +153,6 @@ input, textarea, button {outline: none;}
 .btn {
 	border-radius: 5px;
 	background-color: rgb(72, 203, 232);
-	width: 139px;
 	height: 31px;
 	border:solid #3ba8c0;
 	border-width: 0 0 2px 0;	
@@ -170,10 +169,18 @@ input, textarea, button {outline: none;}
 	border-radius: 4px;
 	outline: none;
 }
+.has-error{
+	background-color: #fad2d1;
+	border-color: #f97e76;
+}
+.has-success{
+	background-color: none;
+	border-color: #3c763d;
+}
 .label{
 	font-family: 'fira_sansbook';
 	color: #58697a;
-	font-size: 18px;
+	font-size: 35px;
 }
 .b-close{
 	float: right;
@@ -194,7 +201,7 @@ input, textarea, button {outline: none;}
 .modal-title{
 	font-size: 21px;
 	color: #fbfcfd;
-	font-family: 'fira_sansregular';
+	font-family: 'fira_sansbook';
 	margin: 0;
 }
 .textarea{

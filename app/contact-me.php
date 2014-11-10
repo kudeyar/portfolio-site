@@ -2,6 +2,7 @@
 <?php
   $page = 'contact-me';
   $title = 'Связаться со мной';
+  include "head.php";
   include "header.php";
 ?>  
     
