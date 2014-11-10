@@ -4,8 +4,10 @@ require_once 'config.php';
 
 $page = $_GET['page'];
 $pdo = connectToDB();
+$data = array();
 switch($page){
     case 'my-work':
+        $data['portfolio'] = getDataAsArray($pdo, $data_sql['getPortfolio']);
         require_once 'my-work.php';
         break;
 
