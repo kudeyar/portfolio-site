@@ -1,7 +1,7 @@
 <!-- Шапка -->
 <header>
     <div class="container-big">
-      <img src="images/logo.png" alt="logo" class="logo">
+      <img src="/app/images/logo.png" alt="logo" class="logo">
       <div class="socials">
           <a href="" class="vk">Вконтакте</a>
           <a href="" class="tw">Twitter</a>
