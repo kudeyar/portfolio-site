@@ -15,13 +15,15 @@
 			$('form').on('keydown', '.has-error', app.removeError);
 			$('#add-new-project').on('submit', app.addProject);
 			$('#login').on('submit', app.login);
+			$('#contact-me').on('submit', app.contactMe);
 		},
 
+		// Убирает красную обводку у инпута
 		removeError: function() {
 			$(this).removeClass('has-error');
 		},
 
-		// Вызов модального окна
+		// Вызывает модальное окно
 		showModal: function () {
 			 // Подключаем плагин bPopup
 			 $('#new-progect-popup').bPopup({
@@ -37,70 +39,77 @@
 			 });
 		},
 
+		// Форма "Связаться со мной"
+		contactMe: function (ev) {
+			ev.preventDefault();
+
+			var form = $(this),
+				ans = app.ajaxForm(form);
+
+			if (ans === "OK") {
+				alert('Сообщение отправлено!');
+			}else{
+				alert('Сервер не хочет отправлять сообщение!');
+			}
+		},
+
 		// Логин
 		login: function (ev) {
 			ev.preventDefault();
 
 			var form = $(this),
-				data = form.serialize();
+				ans = app.ajaxForm(form);
 
-			console.log(data);
-
-			if (!app.validateForm(form)) {
-				return false;
+			if (ans === "OK") {
+				alert('Вы вошли!');
+			}else{
+				alert('Сервер вас не пускает!');
 			}
-
-			$.ajax({
-				url: 'login_server.php',
-				type: 'POST',
-				data: data,
-			})
-			.done(function(ans) {
-				if (ans === "OK") {
-					alert('Вы вошли!');
-				}else{
-					alert('Сервер вас не пускает!');
-				}
-				// console.log("success");
-			})
-			.fail(function() {
-				// console.log("error");
-			})
-			.always(function() {
-				// console.log("complete");
-			});	
 		},
 
-		// Отправляем запрос на сервер в базу данных
+		// Попытаемся добавить проект
 		addProject: function (ev) {
 			ev.preventDefault();
 
 			var form = $(this),
-				data = form.serialize();
+				ans = app.ajaxForm(form);
 
-			console.log(data);
+			if (ans === "OK") {
+				alert('Проект добавлен!');
+			}else{
+				alert('Сервер не хочет добавлять проект!');
+			}
+		},
 			
+		// Универсальная функция для работы со всеми формами
+		ajaxForm: function (form) {
+
+			data = form.serialize(); // собираем данные с функции
+			console.log(data);
+
+			// убедимся, что форма не пустая
 			if (!app.validateForm(form)) {
 				return false;
 			}
 
-			// Здесь не понятно, как отправлять файл
+			// отправляем аяксом запрос на сервер
 			$.ajax({
 				url: 'ajax.php',
 				type: 'POST',
 				data: data,
 			})
-			.done(function() {
-				// console.log("success");
+			.done(function(ans) {
+				return ans;
 			})
 			.fail(function() {
-				// console.log("error");
+				console.log("error");
 			})
 			.always(function() {
-				// console.log("complete");
+				console.log("complete");
 			});	
 		},
-
+			
+		// Универсальная функция валидации формы
 		validateForm: function (form){
 
 			var elements = form.find('input, textarea'),
@@ -154,7 +163,6 @@
 			});
 
 			return valid;
-			
 		},
 	}
 

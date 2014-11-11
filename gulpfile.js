@@ -1,7 +1,8 @@
 'use strict';
 
 var gulp = require('gulp'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    opn = require('opn');
 
 // css
 gulp.task('css', function () {
@@ -21,6 +22,7 @@ gulp.task('js', function () {
 // watch
 gulp.task('watch', function () {
     livereload.listen();
+    opn('http://dz1_2710/app/');
     gulp.watch('app/styles/*.css', ['css']);
     gulp.watch('app/scripts/*.js', ['js']);
     gulp.watch('app/*.php', ['php']);
