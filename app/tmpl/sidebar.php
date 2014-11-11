@@ -4,7 +4,7 @@
         <ul>
             <li <?php echo ($page == 'about-me') ? 'class="current"' : '';?>><a href="/">Обо мне</a></li>
             <li <?php echo ($page == 'my-work') ? 'class="current"' : '';?>><a href="my-work">Мои работы</a></li>
-            <li <?php echo ($page == 'contact-me') ? 'class="current"' : '';?>><a href="contact-me.php">Связаться со мной</a></li>
+            <li <?php echo ($page == 'contact-me') ? 'class="current"' : '';?>><a href="contact">Связаться со мной</a></li>
         </ul>
     </nav>
     <!-- Контакты -->

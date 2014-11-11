@@ -23,8 +23,10 @@
     <link rel="stylesheet" href="/app/styles/responsive.css">
 
     <!-- Страницы -->
+
     <link rel="stylesheet" href="/app/styles/about_me_page.css">
     <link rel="stylesheet" href="/app/styles/my_work_page.css">
+    <link rel="stylesheet" href="/app/styles/contact-me.css">
     <link rel="stylesheet" href="/app/styles/login.css">
 
     <!-- Плагины -->

@@ -10,6 +10,9 @@ switch($page){
         $data['portfolio'] = getDataAsArray($pdo, $data_sql['getPortfolio']);
         require_once 'my-work.php';
         break;
+    case 'contact':
+        require_once 'contact-me.php';
+        break;
     case 'admin':
         require_once 'login.php';
         break;
