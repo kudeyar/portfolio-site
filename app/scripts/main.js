@@ -70,11 +70,11 @@
                 data = form.serialize();
 
             $.ajax({
-                url: '/app/login_server.php',
+                url: '/app/send_mail.php',
                 type: 'POST',
                 data: data,
-                complete : function(res){
-                    console.log(res);
+                success: function(){
+
                 }
             });
 
