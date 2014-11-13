@@ -20,7 +20,7 @@
         <section class="box">
             <h2>Основная информация</h2>
             <div class="clearfix"></div>
-            <img src="images/face.png" alt="" class="photo">
+            <img src="/app/images/face.png" alt="" class="photo">
             <dl class="dl-horizontal">
               <dt>Меня зовут:</dt>
               <dd>Иванов Андрей Степанович</dd>

@@ -14,6 +14,8 @@ RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^my-work/?$ app/main.php?page=my-work
+RewriteRule ^admin/?$ app/main.php?page=admin
+RewriteRule ^contact/?$ app/main.php?page=contact
 
 <FilesMatch "node_modules">
     Order Deny,Allow

@@ -11,28 +11,29 @@
     <meta name="author" content=""/>
 
     <!-- normalize -->
-    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="/app/bower_components/normalize.css/normalize.css" />
 
     <!-- Шрифты -->
-    <link rel="stylesheet" href="fonts/fira.css">
-    <link rel="stylesheet" href="fonts/proximanovacond-semibold.css">
+    <link rel="stylesheet" href="/app/fonts/fira.css">
+    <link rel="stylesheet" href="/app/fonts/proximanovacond-semibold.css">
 
     <!-- Основные таблицы -->
-    <link rel="stylesheet" href="styles/grid.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="/app/styles/grid.css">
+    <link rel="stylesheet" href="/app/styles/main.css">
+    <link rel="stylesheet" href="/app/styles/responsive.css">
 
     <!-- Страницы -->
-    <link rel="stylesheet" href="styles/about_me_page.css">
-    <link rel="stylesheet" href="styles/my_work_page.css">
-    <link rel="stylesheet" href="styles/contact-me.css">
-    <link rel="stylesheet" href="styles/login.css">
+
+    <link rel="stylesheet" href="/app/styles/about_me_page.css">
+    <link rel="stylesheet" href="/app/styles/my_work_page.css">
+    <link rel="stylesheet" href="/app/styles/contact-me.css">
+    <link rel="stylesheet" href="/app/styles/login.css">
 
     <!-- Плагины -->
-    <link rel="stylesheet" type="text/css" href="bower_components/qtip2/jquery.qtip.css">
+    <link rel="stylesheet" type="text/css" href="/app/bower_components/qtip2/jquery.qtip.css">
 
     <!-- modernizr - исключение, подулючается только в head -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="/app/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
     <!--[if lt IE 7]>

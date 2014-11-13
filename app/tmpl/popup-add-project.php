@@ -15,7 +15,7 @@
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
-        <input type="file" name="projectImage" class="file" id="projectImage" qtip-content="Вы не добавили картинку">
+          <div id="fileupload" style="width: 100%; margin: 0 auto; height: 40px; background: #ccc; line-height: 40px; padding: 0px 10px; cursor: pointer;">Выбрать файл...</div>
       </div>
       <!-- URL проекта -->
       <div class="form-group">
@@ -27,6 +27,7 @@
         <label for="projectDesc" class="label">Описание</label>
         <textarea name="text" id="projectDesc" class="textarea" rows="3" placeholder="Пара слов о вашем проекте" qtip-content="Описание проекта обязательно"></textarea>
       </div>
+          <input type="hidden" name="fileurl" value="" id="fileurl" />
       <!-- Кнопка "Отправить" -->
         <div class="text-center">
           <button type="submit" class="btn">Добавить</button>

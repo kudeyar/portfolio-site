@@ -23,72 +23,27 @@
 
             <div class="projects">
 
+              <?php foreach($data['portfolio'] as $item): ?>
               <!-- Проект 1 -->
               <div class="item">
                 <div class="hover-img">
-                  <img src="images/work/loftblog.jpg" alt="loftblog.ru">
+                  <img src="app/<?php echo $item['img']; ?>" alt="<?php echo $item['title']; ?>">
                   <div class="zoom-wrapper">
-                    <a href="http://loftblog.ru/" class="zoom" target="_blank">портал видео уроков</a>
+                    <a href="<?php echo $item['url']; ?>" class="zoom" target="_blank"><?php echo $item['title']; ?></a>
                   </div>
                 </div>
-                <a href="http://loftblog.ru/" target="_blank">loftblog.ru</a>
-                <p>Сайт с уроками по web разработке</p>
+                <a href="<?php echo $item['url']; ?>" target="_blank"><?php echo $item['title']; ?></a>
+                <p><?php echo $item['description']; ?></p>
               </div>
-              
-              <!-- Проект 2 -->
-              <div class="item">
-                <div class="hover-img">
-                  <img src="images/work/itloft.jpg" alt="itloft.ru">
-                  <div class="zoom-wrapper">
-                    <a href="http://itloft.ru/" class="zoom" target="_blank">диджитал агентство</a>
-                  </div>
-                </div>
-                <a href="http://itloft.ru/" target="_blank">itloft.ru</a>
-                <p>Сайт агенства интернет решений itloft</p>
-              </div>
-              
-              <!-- Проект 3 -->
-              <div class="item">
-                <div class="hover-img">
-                  <img src="images/work/landingsloft.jpg" alt="landingsloft.ru">
-                  <div class="zoom-wrapper">
-                    <a href="http://landingsloft.ru/" class="zoom" target="_blank">студия лендингов</a>
-                  </div>
-                </div>
-                <a href="http://landingsloft.ru/" target="_blank">landingsloft.ru</a>
-                <p>Сайт по разработке лендингов с гарантией</p>
-              </div>
-              
-              <!-- Проект 4 -->
-              <div class="item">
-                <div class="hover-img">
-                  <img src="images/work/kovalchuk.jpg" alt="kovalchuk.ru">
-                  <div class="zoom-wrapper">
-                    <a href="http://kovalchuk.us/" class="zoom" target="_blank">сайт разработчика</a>
-                  </div>
-                </div>
-                <a href="http://kovalchuk.us/" target="_blank">kovalchuk.us</a>
-                <p>Личный сайт Дмитрия Ковальчука</p>
-              </div>
-              
-              <!-- Проект 5 -->
-              <div class="item">
-                <div class="hover-img">
-                  <img src="images/work/loftschool.jpg" alt="loftschool.ru">
-                  <div class="zoom-wrapper">
-                    <a href="http://loftschool.ru/" class="zoom" target="_blank">школа веб разработки</a>
-                  </div>
-                </div>
-                <a href="http://loftschool.ru/" target="_blank">loftschool.ru</a>
-                <p>Школа по обучению веб разработчиков</p>
-              </div>
+             <?php endforeach; ?>
 
+            <?php if($_SESSION['auth']): ?>
               <!-- Добавить новый проект -->
               <a href="#" class="item add-new-item">
                 <div class="icon-add"></div>
                 <span>Добавить проект</span>
               </a>
-
+            <?php endif; ?>
             </div>
 
         </section>           
