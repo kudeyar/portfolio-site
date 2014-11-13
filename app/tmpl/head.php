@@ -25,6 +25,7 @@
     <!-- Страницы -->
     <link rel="stylesheet" href="styles/about_me_page.css">
     <link rel="stylesheet" href="styles/my_work_page.css">
+    <link rel="stylesheet" href="styles/contact-me.css">
     <link rel="stylesheet" href="styles/login.css">
 
     <!-- Плагины -->

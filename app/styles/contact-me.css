@@ -1,0 +1,45 @@
+.contact-me{
+
+}
+.contact-me .sec-header{
+	background: #48cbe8;
+	border-bottom: 12px solid #67dffa;
+	padding: 6px 16px 2px;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+}
+.contact-me .sec-header h2{
+	font-family: 'fira_sansbook';
+	font-size: 27px;
+	color: #ffffff;
+	border: none;
+	margin: 10px;
+}
+.contact-me .form{
+	width: 376px;
+	margin: 40px auto;
+
+}
+.contact-me .form-line{
+	overflow: hidden;
+
+}
+.contact-me .form-line .form-group{
+	width: 46%;
+
+}
+.contact-me .button-group{
+
+}
+.contact-me .button-group button[type="submit"]{
+
+}
+.contact-me .button-group button[type="reset"]{
+	float: right;
+
+}
+.btn-res{
+	background: #849db5;
+	border-color: #687b8f;
+
+}
