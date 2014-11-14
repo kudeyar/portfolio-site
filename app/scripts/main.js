@@ -24,9 +24,18 @@
                 url: '/app/upload.php',
                 dataType: 'json',
                 success: function(data){
-                    $('#fileurl').val(data.url);
-                }
-            });
+
+                    console.log(data);
+
+                    var mes = data.message;
+
+                    if (mes == 'ОК') {
+                        $('#fileurl').val(data.url);
+                    }
+                    else{
+                        alert(mes);
+                    }
+            }});
 
 
         },
