@@ -23,6 +23,6 @@ if($pdo->exec($sql)){
 } else {
     $data['message'] = "Неизвестная ошибка при добавлении проекта в БД";
 }
-
+// выводим результат в JSON
 json_encode($data);
 exit;

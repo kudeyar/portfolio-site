@@ -1,22 +1,37 @@
+# Установка кодировки для проекта
 AddDefaultCharset UTF-8
+# Установка значений директив PHP
 php_value register_globals 0
 php_value magic_quotes_gpc off
 
+# Разрешение прохождения по символическим ссылкам
 Options FollowSymLinks
-Options +Indexes
+# Запрет на просмотр файлов в директориях
+Options -Indexes
 
+# Установка индексного файла для директории
 DirectoryIndex app/main.php
+# Установка файла обработчика ошибки 404
 ErrorDocument 404 app/404.html
 
+# Включение mod_rewrite
 RewriteEngine on
 
+# Правила для mod_rewrite
+# Если это не файл favicon
 RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+# Если это не папка
 RewriteCond %{REQUEST_FILENAME} !-d
+# Если это не файл
 RewriteCond %{REQUEST_FILENAME} !-f
+# с my-work/ переправлять по URL app/main.php?page=my-work
 RewriteRule ^my-work/?$ app/main.php?page=my-work
+# с admin/ переправлять по URL app/main.php?page=admin
 RewriteRule ^admin/?$ app/main.php?page=admin
+# с contact/ переправлять по URL app/main.php?page=contact
 RewriteRule ^contact/?$ app/main.php?page=contact
 
+# Запрет на доступ к папке node_modules
 <FilesMatch "node_modules">
     Order Deny,Allow
     Deny from All

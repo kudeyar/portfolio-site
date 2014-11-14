@@ -24,7 +24,7 @@
             <div class="projects">
 
               <?php foreach($data['portfolio'] as $item): ?>
-              <!-- Проект 1 -->
+              <!-- Проект -->
               <div class="item">
                 <div class="hover-img">
                   <img src="app/<?php echo $item['img']; ?>" alt="<?php echo $item['title']; ?>">
@@ -36,7 +36,7 @@
                 <p><?php echo $item['description']; ?></p>
               </div>
              <?php endforeach; ?>
-
+            <!-- Проверяем, пользователь залогинен или нет -->
             <?php if($_SESSION['auth']): ?>
               <!-- Добавить новый проект -->
               <a href="#" class="item add-new-item">
