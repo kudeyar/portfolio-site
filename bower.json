@@ -14,9 +14,10 @@
   ],
   "dependencies": {
     "normalize.css": "~3.0.2",
-    "jquery": "~2.1.1",
+    "jquery": "1.11.1", 
     "modernizr": "~2.8.3",
     "bpopup": "~0.10.0",
-    "qtip2": "~2.2.1"
+    "qtip2": "~2.2.1",
+    "placeholder-polyfill": "~0.0.1"
   }
 }

@@ -18,26 +18,26 @@
             $('#contact-me').on('submit', app.contactMe);
 
             var fileupload = $('#fileupload');
-            new AjaxUpload(fileupload, {
-                action: "/app/upload.php",
-                name: "userfile",
-                autoSubmit: true,
-                onSubmit: function(file, ext){
-                    fileupload.text("Загрузка");
-                    this.disable();
-                },
-                onComplete: function(file, response){
-                    var otvet = JSON.parse(response);
-                    console.log(otvet);
-                    if(otvet.message == "ОК"){
-                        fileupload.text('Файл загружен');
-                        $('#fileurl').val(otvet.url);
-                    }else{
-                        fileupload.text(otvet.message);
-                    }
-                    this.enable();
-                }
-            });
+            // new AjaxUpload(fileupload, {
+            //     action: "/app/upload.php",
+            //     name: "userfile",
+            //     autoSubmit: true,
+            //     onSubmit: function(file, ext){
+            //         fileupload.text("Загрузка");
+            //         this.disable();
+            //     },
+            //     onComplete: function(file, response){
+            //         var otvet = JSON.parse(response);
+            //         console.log(otvet);
+            //         if(otvet.message == "ОК"){
+            //             fileupload.text('Файл загружен');
+            //             $('#fileurl').val(otvet.url);
+            //         }else{
+            //             fileupload.text(otvet.message);
+            //         }
+            //         this.enable();
+            //     }
+            // });
 
         },
 

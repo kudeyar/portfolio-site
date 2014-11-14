@@ -50,7 +50,7 @@
     <link rel="stylesheet" type="text/css" href="/app/bower_components/qtip2/jquery.qtip.css">
 
     <!-- modernizr - исключение, подулючается только в head -->
-    <script src="/app/bower_components/modernizr/modernizr.js"></script>
+    <script src="/app/bower_components/modernizr/modernizr.js"></script>    
 </head>
 <body>
     <!--[if lt IE 7]>
