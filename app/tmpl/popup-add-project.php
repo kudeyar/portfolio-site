@@ -15,7 +15,11 @@
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
-          <input id="fileupload" type="file" name="files[]" multiple>
+          <div class="file input" id="uploadfile">
+            <span class="val">Выберите файл</span>
+            <input id="fileupload" type="file" name="files[]" multiple />
+            <input type="hidden" name="fileurl" value="" id="fileurl" />
+          </div>
       </div>
       <!-- URL проекта -->
       <div class="form-group">
@@ -27,7 +31,6 @@
         <label for="projectDesc" class="label">Описание</label>
         <textarea name="text" id="projectDesc" class="textarea" rows="3" placeholder="Пара слов о вашем проекте" qtip-content="Описание проекта обязательно"></textarea>
       </div>
-          <input type="hidden" name="fileurl" value="" id="fileurl" />
       <!-- Кнопка "Отправить" -->
         <div class="text-center">
           <button type="submit" class="btn">Добавить</button>

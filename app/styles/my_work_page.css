@@ -127,6 +127,43 @@
 /* _____________ // Добавить проект _________ */
 
 
+/* _____________ // file upload _________ */
+input[type="file"] {
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+}
+
+.input.file {
+  width: 100%;
+  position: relative;
+  padding: 11px 0;
+}
+
+.file:after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 37px;
+  background: url(../images/upload-icon.png) 10px 5px no-repeat;
+  background-color: #48cbe8;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.file > .val {
+  padding: 0 10px;
+  color: #48cbe8;
+}
+#fileupload{
+	width: 52px;
+	top: 0;
+}
+/* _____________ // file upload end _________ */
+
 /* _____________ Модальное окно _________ */
 #new-progect-popup { 
 	display:none; 
@@ -139,6 +176,8 @@
   	height: 483px;  	
 }
 /* _____________ // Модальное окно _________ */
+
+
 
 /* _____________ Элементы форм _________ */
 input, textarea, button {outline: none;}

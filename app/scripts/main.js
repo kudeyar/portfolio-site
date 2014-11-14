@@ -30,6 +30,7 @@
                     var mes = data.message;
 
                     if (mes == 'ОК') {
+                        $('#uploadfile .val').text(data.name);
                         $('#fileurl').val(data.url);
                     }
                     else{
