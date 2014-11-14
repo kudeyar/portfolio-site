@@ -3,3 +3,5 @@ dist
 app/bower_components
 app/config.php
 .idea/
+/app/config.php
+/app/images/

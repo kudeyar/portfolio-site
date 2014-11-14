@@ -1,7 +1,9 @@
 <?php
+
   // Открываем сессию
   session_start();
   require_once 'config.php';
+
 
   // Получаем значение адресной строки
   $page = $_GET['page'];
