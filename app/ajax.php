@@ -21,8 +21,8 @@ if($pdo->exec($sql)){
     $data['desc'] = $projectDesc;
     $data['message'] = "ОК";
 } else {
-    $data['message'] = "Неизвестная ошибка при добвлении проекта в БД";
+    $data['message'] = "Неизвестная ошибка при добавлении проекта в БД";
 }
-
+// выводим результат в JSON
 json_encode($data);
 exit;
