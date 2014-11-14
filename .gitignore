@@ -2,6 +2,5 @@ node_modules
 dist
 app/bower_components
 app/config.php
+app/images/works/
 .idea/
-/app/config.php
-/app/images/
