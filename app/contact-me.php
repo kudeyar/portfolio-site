@@ -1,7 +1,5 @@
 <!-- Подключаем head и header -->
-<?php
-  $page = 'contact-me';
-  $title = 'Связаться со мной';
+<?php 
   include "tmpl/head.php";
   include "tmpl/header.php";
 ?>  

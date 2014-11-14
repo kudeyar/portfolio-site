@@ -1,6 +1,5 @@
 <!-- Подключаем head и header -->
-<?php
-  $title = 'Обо мне';
+<?php  
   include "tmpl/head.php";
 ?>  
 

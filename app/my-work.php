@@ -1,7 +1,5 @@
 <!-- Подключаем head и header -->
 <?php
-  $page = 'my-work';
-  $title = 'Мои работы';
   include "tmpl/head.php";
   include "tmpl/header.php";
 ?>  
