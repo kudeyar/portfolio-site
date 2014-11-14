@@ -34,7 +34,7 @@ else {
 
         $mail->From = 'email';
         $mail->FromName = 'Сообщение с сайта';
-        $mail->addAddress('email', $name);
+        $mail->addAddress($email, $name);
 
         $mail->WordWrap = 80;
         $mail->Subject = 'Сообщение с сайта портфолио';
