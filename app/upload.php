@@ -96,6 +96,7 @@ if($file['size'] > $file_size){
     if(move_uploaded_file($file['tmp_name'], $uploadDir.str2url($filename).'.'.$extension)){
         $data['message'] = "ОК";
         $data['url'] = $uploadDir.str2url($filename).'.'.$extension;
+        $data['name'] = $filename;
     } else {
         $data['message'] = "Возникла неизвестная ошибка при загрузке файла";
         $data['url'] = '';
