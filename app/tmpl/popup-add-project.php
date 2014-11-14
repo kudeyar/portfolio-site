@@ -15,7 +15,7 @@
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
-          <div id="fileupload" style="width: 100%; margin: 0 auto; height: 40px; background: #ccc; line-height: 40px; padding: 0px 10px; cursor: pointer;">Выбрать файл...</div>
+          <input id="fileupload" type="file" name="files[]" multiple>
       </div>
       <!-- URL проекта -->
       <div class="form-group">

@@ -11,11 +11,15 @@
 </div> <!-- // Главная обертка -->
 
     <!-- Скрипты только в конце страницы -->
-    <script src="/app/bower_components/jquery/dist/jquery.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="/app/bower_components/jquery/dist/jquery.js"></script> -->
     <script src="/app/bower_components/bpopup/jquery.bpopup.js"></script>
     <script src="/app/bower_components/qtip2/jquery.qtip.js"></script>
     <script src="/app/bower_components/placeholder-polyfill/dist/jquery.placeholder.js"></script>
-    <script src="/app/scripts/main.js"></script>
+     <script src="/app/scripts/jquery.ui.widget.js"></script>
+     <script src="/app/scripts/jquery.iframe-transport.js"></script>
+     <script src="/app/scripts/jquery.fileupload.js"></script>
+     <script src="/app/scripts/main.js"></script>
 
 </body>
 </html>
