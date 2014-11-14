@@ -18,28 +18,32 @@
 .contact-me .form{
 	width: 376px;
 	margin: 40px auto;
-
 }
 .contact-me .form-line{
 	overflow: hidden;
-
 }
 .contact-me .form-line .form-group{
 	width: 46%;
 
 }
-.contact-me .button-group{
-
+.contact-me .captcha{
+	width: 46%;
 }
-.contact-me .button-group button[type="submit"]{
-
+.contact-me .input-captcha{
+	width: 46%;
+	margin-top: 16px;
+}
+.contact-me .button-group{
+	clear: both;
+	margin-top: 20px;
 }
 .contact-me .button-group button[type="reset"]{
 	float: right;
-
+}
+.contact-me .captcha-wrap .label{
+	font-size: 16px;
 }
 .btn-res{
 	background: #849db5;
 	border-color: #687b8f;
-
 }

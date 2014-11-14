@@ -1,7 +1,7 @@
 <?php
 define('HOST', 'localhost');
 define('USER', 'root');
-define('DBNAME', 'portfoliolight');
+define('DBNAME', 'dz1');
 define('PASSWORD', '');
 
 $data_sql = array(

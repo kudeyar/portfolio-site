@@ -149,6 +149,7 @@ input, textarea, button {outline: none;}
 }
 .form-group {
 	margin-bottom: 10px;
+	overflow: hidden;
 }
 .btn {
 	border-radius: 5px;

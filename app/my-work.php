@@ -5,10 +5,7 @@
   include "tmpl/head.php";
   include "tmpl/header.php";
 ?>  
-    
-<!-- Главный контейнер -->
-<div class="container">            
-    
+  
     <!-- Подключаем сайдбар -->
     <?php
       include "tmpl/sidebar.php";
@@ -48,7 +45,6 @@
 
         </section>           
     </div>
-</div> 
 
 <!-- Подключаем модальное окно -->
 <?php

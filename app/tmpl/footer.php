@@ -1,3 +1,5 @@
+ </div> <!-- // Основной контетн -->
+
     <!-- Подвал -->
     <footer class="footer-page">
         <div class="gline"></div>
@@ -5,6 +7,8 @@
           <p>©, Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
         </div>
     </footer>
+
+</div> <!-- // Главная обертка -->
 
     <!-- Скрипты только в конце страницы -->
     <script src="/app/bower_components/jquery/dist/jquery.js"></script>

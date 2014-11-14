@@ -1,59 +1,78 @@
 body{
-	background: url(../images/pattern.png) repeat;
-	margin-bottom: 110px;
+	background: url(../images/pattern.png) repeat;		
+	height: 100%;
 }
 html {
-    overflow-y:scroll;
+	overflow-y:scroll;
+	height: 100%;
 }
 h2{
   font-size: 27px;
   font-family: 'fira_sansbook';
 }
-
 h1, h2, h3 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
 }
 p{
-    font-family: 'fira_sanslight';
-    color: #4a545d;
+	font-family: 'fira_sanslight';
+	color: #4a545d;
 }
 .container {
-    width: 960px;
+  width: 960px;
+}
+.main-wrapper{
+	min-height: 100%; 
+	position: relative; 
+}
+.main-container{
+	padding-bottom: 100px;
 }
 
 
-/* Шапка*/
+/* Шапка */
 header{
 	height: 119px;
 	background-color: #eff3f7;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 header .gline {
 	bottom: 0;
 }
 header .logo{
-	float: left;
-	margin-top: 23px;
-	margin-left: -5px;
+	position: absolute;
+	top: 31px;
+	left: 0;
 }
 header .socials{
-	float: right;
-	margin-top: 36px;
+	position: absolute;
+	right: 0;
+	top: 36px;
+	margin: 0;
+	padding: 0;
 }
 /* Шапка - конец */
 
 
 
 /* Блок социальных ссылок */
-.socials a{
+.socials li{
+	list-style: none;
+	display: inline-block; 
 	height: 47px;
-	width: 47px;
-	text-indent: -9999px;
-	display: inline-block;
-	margin-left: 18px;
+	width: 47px;	
+	margin-left: 18px; /* Отступ у таких элементов всегда слева */
+}
+.socials li:first-child{
+	margin-left: 0; /* А у первого элемента обнуляем отступ */
+}
+.socials li a{
+	display: block;
+	height: 100%;
+	width: 100%;	
+	text-indent: -9999px;	
 	background: url(../images/socials.png) no-repeat;
 }
 .socials .vk{ background-position: -2px -3px;}
@@ -213,7 +232,6 @@ header .socials{
 	min-height: 1px;
 }
 .main .box{
-	margin-bottom: 10px;
 	padding: 0;	
 }
 .main h2{
@@ -228,11 +246,12 @@ header .socials{
 
 /* подвал */
 .footer-page{
+	position:absolute;
+  left: 0;
 	height: 80px;
+  width: 100%;
 	background: #eff3f7;
-	position:fixed;
-    bottom:0;
-    width: 100%;
+	bottom: 0;
 }
 .footer-page .gline {
 	top: 0;
@@ -252,7 +271,7 @@ header .socials{
 .box{
 	background: #eff3f7;
 	border-radius: 4px;
-	margin: 20px 0 35px;
+	margin-bottom: 20px;
 }
 .gline {
 	background-image: -moz-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);

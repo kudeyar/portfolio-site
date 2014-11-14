@@ -5,10 +5,7 @@
   include "tmpl/head.php";
   include "tmpl/header.php";
 ?>  
-    
-<!-- Главный контейнер -->
-<div class="container">            
-    
+
     <!-- Подключаем сайдбар -->
     <?php
       include "tmpl/sidebar.php";
@@ -40,13 +37,12 @@
                 <label for="message" class="label">Сообщение</label>
                 <textarea name="message" id="message" class="textarea" rows="3" placeholder="Кратко в чем суть" qtip-content="Забыли написать, что вы от меня хотите"></textarea>
               </div>
-
-                <div class="form-group">
-                    <label for="captcha" class="label">Введите код, указанный на картинке</label>
-                    <img src="/app/captcha.php" alt="" class="captcha"/>
-                    <input type="text" name="captcha" class="input" id="captcha" placeholder="Введите код" qtip-content="Вы не ввели код">
-                </div>
-
+              <!-- Капча -->
+              <div class="form-group captcha-wrap">
+                  <label for="captcha" class="label">Введите код, указанный на картинке</label>
+                  <img src="/app/captcha.php" alt="код" class="captcha pull-left"/>
+                  <input type="text" name="captcha" class="input input-captcha pull-right" id="captcha" placeholder="Введите код" qtip-content="Вы не ввели код">
+              </div>
               <!-- Кнопка "Отправить" -->
               <div class="button-group">
                 <button type="submit" class="btn">Отправить</button>
@@ -55,7 +51,7 @@
             </form>            
         </section>           
     </div>
-</div> 
+
 
 <!-- Подключаем футер -->
 <?php
