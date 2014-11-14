@@ -1,6 +1,7 @@
 <?php
 // Открываем сессию
 session_start();
+ob_start();
 require_once 'config.php';
 
 // Получаем значение адресной строки
@@ -30,3 +31,5 @@ switch($page){
         break;
 
 }
+
+echo ob_get_clean();

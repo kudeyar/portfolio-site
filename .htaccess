@@ -32,7 +32,7 @@ RewriteRule ^admin/?$ app/main.php?page=admin
 RewriteRule ^contact/?$ app/main.php?page=contact
 
 # Запрет на доступ к папке node_modules
-<FilesMatch "node_modules">
+<FilesMatch "/node_modules">
     Order Deny,Allow
     Deny from All
 </FilesMatch>
