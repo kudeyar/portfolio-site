@@ -1,66 +1,70 @@
-(function() {
+(function() {    
 
-    var app = {
+  var app = {
 
-        // Инициализация
-        initialize : function () {
-            this.setUpListeners();
-        },
+    // Инициализация
+    initialize : function () {
+      this.setUpListeners();
+      this.fileUp();
+    },
 
-        // Подключаем прослушку событий
-        setUpListeners: function () {
-            $('.add-new-item').on('click', app.showModal);
+    // Подключаем прослушку событий
+    setUpListeners: function () {
+      $('.add-new-item').on('click', app.showModal);
 
-            // form
-            $('form').on('keydown', '.has-error', app.removeError);
-            $('#add-new-project').on('submit', app.addProject);
-            $('#login').on('submit', app.login);
-            $('#contact-me').on('submit', app.contactMe);
+      // form
+      $('form').on('keydown', '.has-error', app.removeError);
+      $('#add-new-project').on('submit', app.addProject);
+      $('#login').on('submit', app.login);
+      $('#contact-me').on('submit', app.contactMe);
+    },
 
+    // Подгрузка новых проектов
+    fileUp : function () {
 
-            var fileupload = $('#fileupload');
+      var divUpload = $('#uploadfile'), // div, в который обернут fileUpload
+          valSpan = divUpload.find('.file-name'), // span, в который мы будем помещать название файла
+          inpFile = $('#fileupload'), // input file
+          inpUrl = $('#fileurl'); // input fileurl
 
-            $('#fileupload').fileupload({
-                url: '/app/upload.php',
-                dataType: 'json',
-                success: function(data){
+      inpFile.fileupload({
+        url: '/app/upload.php',
+        dataType: 'json',
+        success: function(data){
+          var mes = data.message;
+          if (mes == 'ОК') {
+            valSpan.text(data.name);
+            inpUrl.val(data.url);
+          }
+          else{
+            // TODO : доделать вывод ошибок
+            console.log('Ошибка на сервере');
+          }
+        }
+      });
 
-                    console.log(data);
+    },
 
-                    var mes = data.message;
+    // Убирает красную обводку у инпута
+    removeError: function() {
+      $(this).removeClass('has-error');
+    },
 
-                    if (mes == 'ОК') {
-                        $('#uploadfile .val').text(data.name);
-                        $('#fileurl').val(data.url);
-                    }
-                    else{
-                        alert(mes);
-                    }
-            }});
-
-
-        },
-
-        // Убирает красную обводку у инпута
-        removeError: function() {
-            $(this).removeClass('has-error');
-        },
-
-        // Вызывает модальное окно
-        showModal: function () {
-            // Подключаем плагин bPopup
-            $('#new-progect-popup').bPopup({
-                speed: 650,
-                transition: 'slideIn',
-                transitionClose: 'slideBack',
-                onClose: function () {
-                    // При закрытии плагина очищаем форму
-                    this.find('.form').trigger("reset");
-                    $(".qtip").remove();
-                    $('.has-error').removeClass('has-error');
-                }
-            });
-        },
+    // Вызывает модальное окно
+    showModal: function () {
+      // Подключаем плагин bPopup
+      $('#new-progect-popup').bPopup({
+        speed: 650,
+        transition: 'slideIn',
+        transitionClose: 'slideBack',
+        onClose: function () {
+          // При закрытии плагина очищаем форму
+          this.find('.form').trigger("reset");
+          $(".qtip").remove();
+          $('.has-error').removeClass('has-error');
+        }
+      });
+    },
 
         // Форма "Связаться со мной"
         contactMe: function (ev) {
@@ -111,16 +115,19 @@
 
 
             var form = $(this),
-                data = form.serialize();
+                data = form.serialize(),
+                url = '/app/ajax.php';
 
-            $.ajax({
-                url: '/app/ajax.php',
-                type: 'POST',
-                data: data,
-                complete : function(res, data){
-                    window.location.href = '/my-work';
-                }
-            });
+            app.ajaxForm(form, url);    
+
+            // $.ajax({
+            //     url: '/app/ajax.php',
+            //     type: 'POST',
+            //     data: data,
+            //     complete : function(res, data){
+            //         window.location.href = '/my-work';
+            //     }
+            // });
         },
 
         // Универсальная функция для работы со всеми формами

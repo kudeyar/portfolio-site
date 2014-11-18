@@ -12,15 +12,17 @@
         <label for="projectName" class="label">Название проекта</label>
         <input type="text" name="projectName" class="input" id="projectName" placeholder="Введите название" qtip-content="Вы не ввели название">
       </div>
+      
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
           <div class="file input" id="uploadfile">
-            <span class="val">Выберите файл</span>
+            <span class="file-name">Загрузите изображение</span>
             <input id="fileupload" type="file" name="files[]" multiple />
-            <input type="hidden" name="fileurl" value="" id="fileurl" />
+            <input id="fileurl" type="hidden" name="fileurl" />
           </div>
       </div>
+
       <!-- URL проекта -->
       <div class="form-group">
         <label for="projectUrl" class="label">URL проекта</label>
@@ -32,7 +34,7 @@
         <textarea name="text" id="projectDesc" class="textarea" rows="3" placeholder="Пара слов о вашем проекте" qtip-content="Описание проекта обязательно"></textarea>
       </div>
       <!-- Кнопка "Отправить" -->
-        <div class="text-center">
+        <div class="btn-wrapp">
           <button type="submit" class="btn">Добавить</button>
         </div>      
       </form>

@@ -1,21 +1,20 @@
-
-
-
-
-
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 body{
 	background: url(../images/pattern.png) repeat;		
 	height: 100%;
 }
 html {
-	overflow-y:scroll;
 	height: 100%;
 }
-h2{
+.h2{
   font-size: 27px;
   font-family: 'fira_sansbook';
 }
-h1, h2, h3 {
+.h1, .h2, .h3 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
@@ -35,23 +34,67 @@ p{
 	padding-bottom: 100px;
 }
 
+.container-big{
+	width: 1200px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+.container {
+	margin-right: auto;
+	margin-left: auto;
+}
+.sidebar{
+	width: 257px;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	margin-right: 53px;
+}
+.clearfix:before, 
+.clearfix:after, 
+.dl-horizontal dd:before, 
+.dl-horizontal dd:after, 
+.container:before, 
+.container:after, 
+.form-group:before, 
+.modal-footer:before, 
+.modal-footer:after, 
+.box:after, 
+.container-big:after {
+	display: table;
+	content: " ";
+}
+.clearfix:after, 
+.dl-horizontal 
+dd:after, 
+.container:after, 
+.container-fluid:after, 
+.form-group:after,
+.modal-footer:after, 
+.box:after,
+.container-big:after {
+	clear: both;
+}
+
 
 /* Шапка */
-header{
+.main-header{
 	height: 119px;
 	background-color: #eff3f7;
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 39px;
 }
-header .gline {
+.main-header .gline {
 	bottom: 0;
 }
-header .logo{
+.main-header .logo{
 	position: absolute;
-	top: 31px;
+	top: 30px;
 	left: 0;
 }
-header .socials{
+.main-header .socials{
 	position: absolute;
 	right: 0;
 	top: 36px;
@@ -103,9 +146,11 @@ header .socials{
 /* Блок меню */
 .menu{
 	font-family: 'fira_sansbook';
+	border-radius: 4px;
+	overflow: hidden;
 }
 .box.menu{
-	margin-bottom: 26px;
+	margin-bottom: 24px;
 }
 .menu ul{
 	list-style: none;
@@ -118,25 +163,9 @@ header .socials{
 	margin: 0 4px;
 	border-bottom: 2px solid #3ba8c0;
 }
-/*.menu ul li:first-child{
-	border-radius: 4px 4px 0 0;
-}*/
-/*.menu ul li:last-child:after, .menu ul li.current:after{
-	height: 0;
-}*/
 .menu ul li:last-child{
 	border-bottom: none;
 }
-/*.menu ul li:after{
-	content: "";
-	display: block;
-	width: 96%;
-	background: #3ba8c0;
-	height: 2px;
-	bottom: 0;
-	position: absolute;
-	margin: 0 auto;
-}*/
 .menu ul li a{
 	font-size: 20px;
 	text-decoration: none;
@@ -150,16 +179,11 @@ header .socials{
 	background: #3ba8c0;
 	margin: 0;
 	border-bottom: none;
-	margin-top: -2px;
 	padding-left: 6px;
+	margin-top: -2px;
 }
 .menu ul li.current:first-child{
 	margin-top: 0;
-	border-radius: 4px 4px 0 0;
-}
-
-.menu ul li.current:last-child{
-	border-radius: 0 0 4px 4px;
 }
 .menu ul li.current a{
 	color: #f9fafb;
@@ -174,13 +198,13 @@ header .socials{
 	font-style: normal;
 	font-family: 'fira_sansbook';
 }
-.contacts .header{
+.contacts .contacts-header{
 	background: #3ba8c0;
 	border-radius: 4px 4px 0 0;
 }
-.contacts .header h2{
+.contacts .contacts-header .h2{
 	font-size: 20px;
-	padding: 12px 17px 6px;
+	padding: 12px 19px 6px;
 	margin: 0;
 }
 .contacts.box{
@@ -216,10 +240,9 @@ header .socials{
 	border-radius: 0 0 4px 4px;
 }
 .contact-icon{
-	display: block;
-	background-image: url(../images/cont.png);
 	display: inline-block;
 	vertical-align: top;
+	background-image: url(../images/cont.png);
 	line-height: 1.5;
 }
 .icon-mail{ background-position: 0 0; width: 21px; height: 16px; } 
@@ -239,7 +262,7 @@ header .socials{
 .main .box{
 	padding: 0;	
 }
-.main h2{
+.main .h2{
 	border-bottom: 2px #3ba8c0 solid;
 	margin: 0 0 20px 0;
 	padding: 19px 23px;
@@ -261,7 +284,7 @@ header .socials{
 .footer-page .gline {
 	top: 0;
 }
-.footer-page p{
+.footer-page .copyright{
 	text-align: center;
 	color: #4a545d;
 	font-family: 'fira_sanslight';

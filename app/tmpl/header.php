@@ -2,9 +2,12 @@
 <div class="main-wrapper">
 
   <!-- Шапка -->
-  <header>
+  <header class="main-header">
     <div class="container-big">
-      <!-- Логотип всегда картинкой в ссылке -->
+      <!-- 
+        Рекомендуется использовать именно <img src="..."> в интересах Backend, 
+        т.к. ваш логотип в будущем, быть может, можно будет загружать и менять из админки.
+      -->
       <a href="/" class="logo">
         <img src="/app/images/logo.png" alt="logo">
       </a>
@@ -24,9 +27,8 @@
         </li>
       </ul>
     </div>
-    <!-- Полоска отдельным элементом (используется также в футере) -->
-    <div class="gline"></div>
-  </header>   
+    <div class="gline"></div> <!-- gline - 2 пиксельная линия с градиентом. Можно сделать отдельным дивом или при помощи :after :before -->
+  </header> <!-- // Шапка --> 
 
   <!-- Основной контент -->
   <div class="container main-container"> 
