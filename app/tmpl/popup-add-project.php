@@ -6,23 +6,23 @@
     </div>
 
     <div class="modal-body">
-      <form id="add-new-project" class="form" role="form">   
+      <form id="add-new-project" class="form" role="form">  
+      <!-- Вывод ошибок с сервера -->
+      <div class="error-box"></div>
       <!-- Название проекта -->
       <div class="form-group">
         <label for="projectName" class="label">Название проекта</label>
         <input type="text" name="projectName" class="input" id="projectName" placeholder="Введите название" qtip-content="Вы не ввели название">
-      </div>
-      
+      </div>      
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
-          <div class="file input" id="uploadfile">
-            <span class="file-name">Загрузите изображение</span>
+          <div class="file" id="uploadfile">
             <input id="fileupload" type="file" name="files[]" multiple />
             <input id="fileurl" type="hidden" name="fileurl" />
+            <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение"/>
           </div>
       </div>
-
       <!-- URL проекта -->
       <div class="form-group">
         <label for="projectUrl" class="label">URL проекта</label>

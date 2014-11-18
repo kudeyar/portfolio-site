@@ -17,17 +17,16 @@ if(empty($projectName) || empty($projectUrl) || empty($projectDesc) || empty($fi
     $sql = "INSERT INTO portfolio VALUES(NULL, '$projectName', '$fileurl', '$projectUrl', '$projectDesc')";
     // Если все нормально доабвлено в БД
     if($pdo->exec($sql)){
-
         $data['title'] = $projectName;
         $data['url'] = $projectUrl;
         $data['img'] = $fileurl;
         $data['desc'] = $projectDesc;
-        $data['message'] = "ОК";
+        $data['message'] = "OK";
     } else {
         $data['message'] = "Неизвестная ошибка при добавлении проекта в БД";
     }
 }
 
 // выводим результат в JSON
-json_encode($data);
+echo json_encode($data);
 exit;

@@ -17,6 +17,8 @@
               <h2>У вас интересный проект? Напишите мне!</h2>
             </div>            
             <form id="contact-me" class="form" role="form">   
+            <!-- Вывод ошибок с сервера -->
+            <div class="error-box"></div>
              <!-- Имя и email в одну строку, для этого обернем в div.form-line -->
              <div class="form-line">
                 <!-- Имя -->

@@ -136,22 +136,22 @@ input[type="file"] {
   right: 0;
 }
 
-.input.file {
+.file {
   width: 100%;
   position: relative;
-  padding: 11px 0;
 }
 
 .file:after {
   content: "";
   display: block;
   width: 52px;
-  height: 39px;
-  background: url(../images/upload-icon.png) 10px 5px no-repeat;
+  height: 41px;
+  background: url(../images/upload-icon.png) 10px 7px no-repeat;
   background-color: #48cbe8;
   position: absolute;
   top: 0;
   right: 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .file > .val {
@@ -172,8 +172,7 @@ input[type="file"] {
 	background: #eff3f7;
 	box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
 	border-radius: 5px;
-	width: 364px;
-  	height: 483px;  	
+	width: 364px;	
 }
 /* _____________ // Модальное окно _________ */
 
@@ -211,8 +210,8 @@ input, textarea, button {outline: none;}
 	outline: none;
 }
 .has-error{
-	background-color: #fad2d1;
-	border-color: #f97e76;
+	background-color: #fad2d1 !important;
+	border-color: #f97e76 !important;
 }
 .has-success{
 	background-color: none;
@@ -258,7 +257,17 @@ input, textarea, button {outline: none;}
 }
 .modal-body .btn-wrapp{
 	text-align: center;
-	margin-top: 13px;
+	margin: 13px auto 6px;
+}
+.form .error-box{
+	border-radius: 4px;
+	background-color: #fad2d1;
+	border-color: #f97e76;
+	color: #f97e76;
+	font-size: 12px;
+	width: 100%;
+	padding: 6px 12px;	
+	display: none;
 }
 
 /* placeholder */
