@@ -7,8 +7,9 @@
 
     <div class="modal-body">
       <form id="add-new-project" class="form" role="form">  
-      <!-- Вывод ошибок с сервера -->
-      <div class="error-box"></div>
+      <!-- Вывод сообщений с сервера -->
+      <div class="server-mes error-mes"></div>
+      <div class="server-mes success-mes"></div>
       <!-- Название проекта -->
       <div class="form-group">
         <label for="projectName" class="label">Название проекта</label>
@@ -17,11 +18,11 @@
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
-          <div class="file" id="uploadfile">
-            <input id="fileupload" type="file" name="files[]" multiple />
-            <input id="fileurl" type="hidden" name="fileurl" />
-            <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение"/>
-          </div>
+        <div class="file" id="uploadfile">
+          <input id="fileupload" type="file" name="files[]" multiple />
+          <input id="fileurl" type="hidden" name="fileurl" />
+          <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение"/>
+        </div>
       </div>
       <!-- URL проекта -->
       <div class="form-group">

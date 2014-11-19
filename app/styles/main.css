@@ -319,3 +319,14 @@ dd:after,
 	float: right !important;
 }
 /* общие классы - конец */
+
+
+/* тултипы */
+.qtip-mystyle{
+	background-color: #f97e76 !important;
+	border-color: #f97e76 !important;
+	font-family: 'fira_sansbook' !important;
+	color: #ffffff !important;
+	font-size: 13px !important;
+}
+/* тултипы - конец */

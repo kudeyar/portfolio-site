@@ -185,6 +185,9 @@ input, textarea, button {outline: none;}
 	width: 100%;
 	padding: 6px 12px;	
 }
+.textarea{
+	resize: none;
+}
 .form-group {
 	margin-bottom: 6px;
 	overflow: hidden;
@@ -259,17 +262,25 @@ input, textarea, button {outline: none;}
 	text-align: center;
 	margin: 13px auto 6px;
 }
-.form .error-box{
+.server-mes{
 	border-radius: 4px;
-	background-color: #fad2d1;
-	border-color: #f97e76;
-	color: #f97e76;
+	border: 1px solid;
 	font-size: 12px;
 	width: 100%;
-	padding: 6px 12px;	
+	padding: 6px 12px;
+	margin-bottom: 6px;	
 	display: none;
 }
-
+.error-mes{	
+	background-color: #fad2d1;
+	border-color: #f97e76;
+	color: #f97e76;	
+}
+.success-mes{
+	background-color: #fad2d1;
+	border-color: #49bb7b;
+	color: #49bb7b;
+}
 /* placeholder */
 *::-webkit-input-placeholder {
     color: #48cbe8;

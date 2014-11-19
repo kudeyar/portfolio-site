@@ -2,7 +2,6 @@
     font-family: 'ProximaNovaCondensedSemibold';
     src: url('proximanovacond-semibold.eot');
     src: url('proximanovacond-semibold.eot') format('embedded-opentype'),
-         url('proximanovacond-semibold.woff2') format('woff2'),
          url('proximanovacond-semibold.woff') format('woff'),
          url('proximanovacond-semibold.ttf') format('truetype'),
          url('proximanovacond-semibold.svg#ProximaNovaCondensedSemibold') format('svg');
