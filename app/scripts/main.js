@@ -19,14 +19,7 @@
       $('#add-new-project').on('submit', app.addProject); // добавление проекта
       $('#login').on('submit', app.login); //  авторизация пользователя
       $('#contact-me').on('submit', app.contactMe); // отправка формы "связаться со мной""
-    },
-
-    // Убирает красную обводку у элементов форм
-    removeError: function() {
-      console.log('Красная обводка у элементов форм удалена');
-
-      $(this).removeClass('has-error');
-    },
+    },    
 
     // Подгрузка новых проектов
     fileUp : function () {      
@@ -57,17 +50,7 @@
           }
         }
       });
-    },
-
-    // Универсальная функция очистки формы
-    clearForm: function(form) {
-      console.log('Очищаем форму');
-
-      var form = $(this);
-      form.find('.input, .textarea').trigger('hideTooltip'); // удаляем тултипы
-      form.find('.has-error').removeClass('has-error'); // удаляем красную подсветку
-      form.find('.error-mes, success-mes').text('').hide(); // очищаем и прячем сообщения с сервера
-    },
+    },    
 
     // Вызывает модальное окно
     showModal: function () {
@@ -86,97 +69,138 @@
       });
     },
 
-    // Форма "Связаться со мной"
+    // Обрабатывает форму "Связаться со мной"
     contactMe: function (ev) {
       console.log('Работаем с формой связи');
 
       ev.preventDefault();
 
-      var form = $(this),
-          data = form.serialize(),
-          url = '/app/send_mail.php';  
+      var form = $(this),          
+          url = '/app/send_mail.php',
+          defObject = app.ajaxForm(form, url);
 
-      // убедимся, что форма не пустая
-      if (!app.validateForm(form)) return;
-
-      app.ajaxForm(data, url)
-      .done(function(ans) {
-        console.log(ans);
-        if ( ans === 'OK'){
-          console.log('Письмо отправлено!');
-        } else{
-          form.find('.error-mes').text(ans.message).show();
-        }
-      })
-      .fail(function(ans) {
-        form.find('.error-mes').text('На сервере произошла ошибка').show();
-      });
-
+     if (defObject) {
+        defObject.done(function(ans) {
+          console.log(ans);
+          var mes = ans.message;
+          if ( mes === 'OK'){
+            form.find('.error-mes').text('').hide();
+            form.find('.success-mes').text(mes).show();            
+          } else{
+            form.find('.error-mes').text(mes).show();
+          }
+        });
+      }
     },
 
-    // Логин
+    // Обрабатывает форму авторизации
     login: function (ev) {
       console.log('Работаем с формой авторизации');
 
       ev.preventDefault();
 
-       var form = $(this),
-          data = form.serialize(),
-          url = '/app/login_server.php';
+      var form = $(this),
+          url = '/app/login_server.php',
+          defObject = app.ajaxForm(form, url);
 
-      if (!app.validateForm(form)) return; // убедимся, что форма не пустая
-
-      // ajax запрос
-      app.ajaxForm(data, url)
-        .done(function(ans) {
+      if (defObject) {
+        defObject.done(function(ans) {
           var mes = ans.responseText;
           if ( mes === 'OK'){
+            form.find('.error-mes').text('').hide();
             window.location.href = '/';
           } else{
             form.find('.error-mes').text(mes).show();
           }
-        })
-        .fail(function(ans) {
-          form.find('.error-mes').text('На сервере произошла ошибка').show();
-        }); 
-     
+        });
+      }      
     },
 
-    // Добавление проекта
+    // Обрабатывает форму добавления проекта
     addProject: function (ev) {
       console.log('Работаем с формой добавления проекта');
 
       ev.preventDefault();
 
       var form = $(this),
-          data = form.serialize(),
-          url = '/app/ajax.php';
-      
-      if (!app.validateForm(form)) return; // убедимся, что форма не пустая
+          url = '/app/ajax.php',
+          defObject = app.ajaxForm(form, url);
 
-      // ajax запрос
-      app.ajaxForm(data, url)
-        .done(function(ans) {
+      if (defObject) {
+        defObject.done(function(ans) {
           var mes = ans.message;
           if ( mes === 'OK'){
-            location.reload();
+            form.find('.error-mes').text('').hide();
+            form.find('.success-mes').text('Проект успешно добавлен').show();
+            // location.reload(); // сразу перезагрузим страницу
           } else{
             form.find('.error-mes').text(mes).show();
           }
-        })
-        .fail(function(ans) {
-          form.find('.error-mes').text('На сервере произошла ошибка').show();
-        }); 
+        });
+      }
+        
     },
 
-    // Универсальная функция для работы со всеми формами
-    ajaxForm: function (data, url, dataType) { 
-      return $.ajax({
+    // Проверяет форму и делает ajax запрос
+    ajaxForm: function (form, url, dataType) { 
+      
+      if (!app.validateForm(form)) return false;  // Возвращает false, если не проходит валидацию 
+      var data = form.serialize(); // собираем данные из формы в объект data
+
+      return $.ajax({ // Возвращает Deferred Object
         type: 'POST',
         url: url,
-        dataType : dataType || "JSON",
-        data: data
+        dataType : dataType || "JSON", // по-умолчанию тип данных JSON, но можем задать и другой
+        data: data,
+        error: function( xhr, textStatus ) {
+            console.log( [ xhr.status, textStatus ] );
+        }
+
       })
+      .fail(function(ans) { // ошибка обрабатывается всегда одинаково
+        console.log('fail');
+        form.find('.error-mes').text('На сервере произошла ошибка').show();
+      });
+    },    
+
+    // Универсальная функция очистки формы
+    clearForm: function(form) {
+      console.log('Очищаем форму');
+
+      var form = $(this);
+      form.find('.input, .textarea').trigger('hideTooltip'); // удаляем тултипы
+      form.find('.has-error').removeClass('has-error'); // удаляем красную подсветку
+      form.find('.error-mes, success-mes').text('').hide(); // очищаем и прячем сообщения с сервера
+    },
+
+    // Убирает красную обводку у элементов форм
+    removeError: function() {
+      console.log('Красная обводка у элементов форм удалена');
+
+      $(this).removeClass('has-error');
+    },
+
+    // Универсальная функция валидации формы
+    validateForm: function (form){
+      console.log('Проверяем форму');
+
+      var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
+          valid = true;
+
+      $.each(elements, function(index, val) {
+        var element = $(val),
+            val = element.val(),
+            pos = element.attr('qtip-position');         
+
+        if(val.length === 0){
+          element.addClass('has-error');
+          app.createQtip(element, pos);            
+          valid = false;
+        }
+
+      }); // each
+
+      return valid;
     },
 
     // Функция создания тултипа
@@ -221,32 +245,10 @@
           }
         }
       }).trigger('show');
-    },
 
-    // Универсальная функция валидации формы
-    validateForm: function (form){
-      console.log('Проверяем форму');
+      }
+  }
 
-      var elements = form.find('input, textarea').not('#fileupload'),
-          valid = true;
-
-      $.each(elements, function(index, val) {
-        var element = $(val),
-            val = element.val(),
-            pos = element.attr('qtip-position');         
-
-        if(val.length === 0){
-          element.addClass('has-error');
-          app.createQtip(element, pos);            
-          valid = false;
-        }
-
-      }); // each
-
-      return valid;
-      },
-    }
-
-    app.initialize();
+  app.initialize();
 
 }());
