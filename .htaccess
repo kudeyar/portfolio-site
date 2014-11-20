@@ -14,6 +14,7 @@ DirectoryIndex app/main.php
 # Установка файла обработчика ошибки 404
 ErrorDocument 404 app/404.html
 
+
 # Включение mod_rewrite
 RewriteEngine on
 
@@ -30,6 +31,8 @@ RewriteRule ^my-work/?$ app/main.php?page=my-work
 RewriteRule ^admin/?$ app/main.php?page=admin
 # с contact/ переправлять по URL app/main.php?page=contact
 RewriteRule ^contact/?$ app/main.php?page=contact
+
+
 
 # Запрет на доступ к папке node_modules
 <FilesMatch "/node_modules">
