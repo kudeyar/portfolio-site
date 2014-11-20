@@ -12,13 +12,16 @@ $password = md5($_POST['password']);
 $sql = "SELECT COUNT(users.id) as cnt FROM users WHERE users.login = '{$login}' AND users.`password` = '{$password}'";
 $result = $pdo->query($sql);
 $res = $result->fetch(PDO::FETCH_ASSOC);
-
+$data = array();
 // Если пользователь есть в БД
 if($res['cnt'] == 1) {
     $_SESSION['auth'] = true;
-    echo "OK";
-    exit;
+    $data['status'] = "OK";
+    $data['mes'] = 'Добро пожаловать на сайт';
 } else {
-    echo "NO";
-    exit;
+    $data['status'] = "NO";
+    $data['mes'] = 'Пользователя с таким логином / паролем нет в базе';
 }
+
+echo json_encode($data);
+exit;

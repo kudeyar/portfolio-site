@@ -9,11 +9,14 @@ $message = htmlspecialchars(strip_tags(trim($_POST['message'])), ENT_QUOTES);
 $captcha_code = $_POST['captcha'];
 $sess_captcha = $_SESSION['randStrn'];
 
+// массив для отправки на фронтенд
+$data = array();
+
 // Если капча введена не верно
 if($sess_captcha != $captcha_code){
 
-    echo "Код с картинки введен не верно";
-    exit;
+    $data['status'] = 'NO';
+    $data['mes'] = "Код с картинки введен не верно";
 
 }
 // Если капча введена верно
@@ -41,18 +44,21 @@ else {
         $mail->Body    = $message;
 
         if($mail->send()){
-            echo "OK";
-            exit;
+            $data['status'] = 'OK';
+            $data['mes'] = "Письмо успешно отправлено";
         } else {
-            echo "Ошибка при отправке сообщения";
-            exit;
+            $data['status'] = 'NO';
+            $data['mes'] = "Возникла неизвестная ошибка при отправке письма";
         }
 
     } else {
 
-        echo "Не валидный e-mail";
-        exit;
+        $data['status'] = 'NO';
+        $data['mes'] = "Правильно заполните поле e-mail";
 
     }
 
 }
+
+echo json_encode($data);
+exit;

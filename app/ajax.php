@@ -11,7 +11,8 @@ $projectDesc = $_POST['text'];
 $fileurl = $_POST['fileurl'];
 $data = array();
 if(empty($projectName) || empty($projectUrl) || empty($projectDesc) || empty($fileurl)) {
-    $data['message'] = "Есть пустые поля";
+    $data['status'] = 'NO';
+    $data['mes'] = "Есть пустые поля";
 } else {
     $pdo = connectToDB();
     $sql = "INSERT INTO portfolio VALUES(NULL, '$projectName', '$fileurl', '$projectUrl', '$projectDesc')";
@@ -21,9 +22,11 @@ if(empty($projectName) || empty($projectUrl) || empty($projectDesc) || empty($fi
         $data['url'] = $projectUrl;
         $data['img'] = $fileurl;
         $data['desc'] = $projectDesc;
-        $data['message'] = "OK";
+        $data['status'] = 'OK';
+        $data['mes'] = "Проект успешно добавлен в базу данных";
     } else {
-        $data['message'] = "Неизвестная ошибка при добавлении проекта в БД";
+        $data['status'] = 'NO';
+        $data['mes'] = "Неизвестная ошибка при добавлении проекта в БД";
     }
 }
 

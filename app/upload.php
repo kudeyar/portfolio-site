@@ -102,12 +102,14 @@ $data = array();
 
 // Если размер файла больше максимально допустимого
 if($file['size'][0] > $file_size){
-    $data['message'] = "Файл слишком большой. Загружать можно только изображения (gif|png|jpg|jpeg) размером до 2МБ";
+    $data['status'] = 'NO';
+    $data['mes'] = "Файл слишком большой. Загружать можно только изображения (gif|png|jpg|jpeg) размером до 2МБ";
     $data['url'] = '';
 }
 // если MYME-type файла не соответствует допустимому
 else if(!in_array($file['type'][0], $types)){
-    $data['message'] = "Загружать можно только изображения (gif|png|jpg|jpeg) размером до 2МБ";
+    $data['status'] = 'NO';
+    $data['mes'] = "Загружать можно только изображения (gif|png|jpg|jpeg) размером до 2МБ";
     $data['url'] = '';
 }
 // Если ошибок нет
@@ -118,13 +120,15 @@ else if($file['error'][0] == 0){
     $extension = pathinfo($file['name'][0], PATHINFO_EXTENSION);
     // перемещаем файл из временной папки в  нужную
     if(move_uploaded_file($file['tmp_name'][0], $uploadDir.str2url($filename).'.'.$extension)){
-        $data['message'] = "ОК";
+        $data['status'] = 'OK';
+        $data['mes'] = "Изображение успешно загружено";
         $data['url'] = $uploadDir.str2url($filename).'.'.$extension;
         $data['name'] = $filename;
     }
     // ошибка при перемещении файла
     else {
-        $data['message'] = "Возникла неизвестная ошибка при загрузке файла";
+        $data['status'] = 'NO';
+        $data['mes'] = "Возникла неизвестная ошибка при загрузке файла";
         $data['url'] = '';
     }
 }
