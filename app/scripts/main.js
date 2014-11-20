@@ -35,18 +35,18 @@
       inpFile.fileupload({
         url: '/app/upload.php',
         dataType: 'json',
-        success: function(data){
-          console.log(data);
-          var mes = data.message;
-          if (mes == 'ОК') {
+        success: function(ans){
+           var mes = ans.mes,
+               status = ans.status;
+          if (status === 'OK') {
             inpFileName
-              .val(data.name) // добавляем в инпут называние картинки 
+              .val(ans.name) // добавляем в инпут называние картинки 
               .removeClass('has-error') // удаялем красную обводку
               .trigger('hideTooltip'); // удаляем тултип
-            inpUrl.val(data.url);
+            inpUrl.val(ans.url);
           }
           else{
-            form.find('.error-mes').text(mes).show(); // случае ошибки, показываем её текст
+            form.find('.error-mes').text(mes).show(); // в случае ошибки, показываем её текст
           }
         }
       });
@@ -63,8 +63,7 @@
         speed: 650,
         transition: 'slideDown',
         onClose: function () {
-          var form = this.find('.form');
-          form.trigger("reset"); // сбрасываем форму
+          this.find('.form').trigger("reset"); // сбрасываем форму
         }
       });
     },
@@ -79,13 +78,14 @@
           url = '/app/send_mail.php',
           defObject = app.ajaxForm(form, url);
 
-     if (defObject) {
+      if (defObject) {
         defObject.done(function(ans) {
-          console.log(ans);
-          var mes = ans.message;
-          if ( mes === 'OK'){
-            form.find('.error-mes').text('').hide();
-            form.find('.success-mes').text(mes).show();            
+          var mes = ans.mes,
+              status = ans.status;
+
+          if ( status === 'OK'){
+            form.find('.error-mes').text(mes).hide();
+            form.find('.success-mes').text(mes).show();           
           } else{
             form.find('.error-mes').text(mes).show();
           }
@@ -105,9 +105,11 @@
 
       if (defObject) {
         defObject.done(function(ans) {
-          var mes = ans.responseText;
-          if ( mes === 'OK'){
-            form.find('.error-mes').text('').hide();
+          var mes = ans.mes,
+              status = ans.status;
+          if ( status === 'OK'){
+            form.find('.error-mes').text(mes).hide();
+            form.find('.success-mes').text(mes).show();
             window.location.href = '/';
           } else{
             form.find('.error-mes').text(mes).show();
@@ -128,21 +130,23 @@
 
       if (defObject) {
         defObject.done(function(ans) {
-          var mes = ans.message;
-          if ( mes === 'OK'){
-            form.find('.error-mes').text('').hide();
-            form.find('.success-mes').text('Проект успешно добавлен').show();
-            // location.reload(); // сразу перезагрузим страницу
+          var mes = ans.mes,
+              status = ans.status;
+
+          if ( status === 'OK'){
+            form.find('.error-mes').text(mes).hide();
+            form.find('.success-mes').text(mes).show();
+            // TODO: отрисовать новый элемент в DOM при помощи js шаблона
+            location.reload(); // сразу перезагрузим страницу
           } else{
             form.find('.error-mes').text(mes).show();
           }
         });
-      }
-        
+      }        
     },
 
     // Проверяет форму и делает ajax запрос
-    ajaxForm: function (form, url, dataType) { 
+    ajaxForm: function (form, url) {
       
       if (!app.validateForm(form)) return false;  // Возвращает false, если не проходит валидацию 
       var data = form.serialize(); // собираем данные из формы в объект data
@@ -150,15 +154,10 @@
       return $.ajax({ // Возвращает Deferred Object
         type: 'POST',
         url: url,
-        dataType : dataType || "JSON", // по-умолчанию тип данных JSON, но можем задать и другой
-        data: data,
-        error: function( xhr, textStatus ) {
-            console.log( [ xhr.status, textStatus ] );
-        }
-
-      })
-      .fail(function(ans) { // ошибка обрабатывается всегда одинаково
-        console.log('fail');
+        dataType : 'JSON',
+        data: data
+      }).fail( function(ans) {
+        console.log('Проблемы в PHP');
         form.find('.error-mes').text('На сервере произошла ошибка').show();
       });
     },    
@@ -180,8 +179,8 @@
       $(this).removeClass('has-error');
     },
 
-    // Универсальная функция валидации формы
-    validateForm: function (form){
+    // Проверяет форму
+    validateForm: function (form) {
       console.log('Проверяем форму');
 
       var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
@@ -203,7 +202,7 @@
       return valid;
     },
 
-    // Функция создания тултипа
+    // Создаёт тултипы
     createQtip: function (element, position) {
       console.log('Создаем тултип');
 
@@ -245,8 +244,7 @@
           }
         }
       }).trigger('show');
-
-      }
+    }
   }
 
   app.initialize();

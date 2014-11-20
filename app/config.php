@@ -2,7 +2,7 @@
 // константы для хранения подключения к БД
 define('HOST', 'localhost');
 define('USER', 'root');
-define('DBNAME', 'portfoliolight');
+define('DBNAME', 'dz1');
 define('PASSWORD', '');
 
 // массив запросов к БД
