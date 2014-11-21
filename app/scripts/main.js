@@ -7,6 +7,8 @@
       console.log('Инициализация приложения');
 
       this.setUpListeners();
+
+      $('input, textarea').placeholder();
     },
 
     // Подключаем прослушку событий

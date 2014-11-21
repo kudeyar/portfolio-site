@@ -25,7 +25,7 @@
 <script src="/app/bower_components/jquery-file-upload/js/jquery.fileupload.js"></script>
 <!-- // file-upload - для подгрузки файлов -->
 
-<script src="/app/bower_components/placeholder-polyfill/dist/jquery.placeholder.js"></script> <!-- Для поддержки плейсхолдеров в старых IE -->
+<script src="/app/bower_components/jquery-placeholder/jquery.placeholder.js"></script> <!-- Для поддержки плейсхолдеров в старых IE -->
 <script src="/app/scripts/plugins.js"></script> <!-- Перекочевал из html5boilerplate -->
 <script src="/app/scripts/main.js"></script> <!-- Свои скрипты -->
 
