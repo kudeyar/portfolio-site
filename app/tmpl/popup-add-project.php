@@ -18,7 +18,7 @@
       <!-- Картинка проекта -->
       <div class="form-group">
         <label for="projectImage" class="label">Картинка проекта</label>
-        <div class="file" id="uploadfile">
+        <div class="fileupload-wrapper" id="uploadfile">
           <input id="fileupload" type="file" name="files[]" multiple />
           <input id="fileurl" type="hidden" name="fileurl" />
           <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение"/>

@@ -10,7 +10,7 @@
     	<h4 class="modal-title">Авторизуйтесь</h4>
     </div>
     <div class="modal-body">
-			<form id="login" class="form" role="form" action="">   
+			<form id="login" class="form" role="form">   
 				<!-- Вывод сообщений с сервера -->
 	      <div class="server-mes error-mes"></div>
 	      <div class="server-mes success-mes"></div>

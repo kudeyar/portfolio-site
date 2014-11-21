@@ -32,7 +32,7 @@
           </div>
         </div>
         <a href="<?php echo $item['url']; ?>" target="_blank"><?php echo $item['title']; ?></a>
-        <p><?php echo $item['description']; ?></p>
+        <p class="description"><?php echo $item['description']; ?></p>
       </div> <!-- // Проект -->
       <?php endforeach; ?>
       

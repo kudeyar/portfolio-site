@@ -23,16 +23,16 @@
         Это особенно удобно, когда пользователь заходит с мобильного устройства.
       -->
       <li class="mail">
-         <span class="contact-icon icon-mail"></span>
-         <a href="mailto:kovaldn@gmail.com">kovaldn@gmail.com</a>
+        <span class="contact-icon icon-mail"></span>
+        <a href="mailto:kovaldn@gmail.com">kovaldn@gmail.com</a>
       </li>
       <li class="phone">
-         <span class="contact-icon icon-phone"></span>
-         <a href="tel:+78129892723">+78129892723</a>
+        <span class="contact-icon icon-phone"></span>
+        <a href="tel:+78129892723">+78129892723</a>
       </li>
       <li class="skype">
-         <span class="contact-icon icon-skype"></span>
-         <a href="skype:skype_kdn?chat">skype_kdn</a>
+        <span class="contact-icon icon-skype"></span>
+        <a href="skype:skype_kdn?chat">skype_kdn</a>
       </li>
     </ul>
   </address>

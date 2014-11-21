@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible
+
+# TEAM
+
+    Dmitriy Kovalchuk - fronten developer - twitter.com/kovalchukdn
+    Anton Golomazov - backend developer - twitter.com/unfogiven1988
+
+# THANKS
+
+    loftshcool.com
+    loftblog.ru
+

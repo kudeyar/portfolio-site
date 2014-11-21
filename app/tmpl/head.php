@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -45,6 +48,8 @@
 
   <!-- Основные таблицы -->
   <link rel="stylesheet" href="/app/styles/main.css">
+  <link rel="stylesheet" href="/app/styles/form-elements.css">
+  <link rel="stylesheet" href="/app/styles/modal.css">
   <link rel="stylesheet" href="/app/styles/responsive.css">
 
   <!-- Страницы -->
@@ -60,6 +65,6 @@
   <script src="/app/bower_components/modernizr/modernizr.js"></script>    
 </head>
 <body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
-  <![endif]-->
+<!--[if lt IE 7]>
+  <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+<![endif]-->

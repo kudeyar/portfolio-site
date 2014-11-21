@@ -1,6 +1,6 @@
 <!-- Подключаем head и header -->
 <?php
-  $title = 'Обо мне';
+ 	$data['title'] = 'Страницы не существует';
   include "tmpl/head.php";
   include "tmpl/header.php";
 ?>  

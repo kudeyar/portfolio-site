@@ -12,7 +12,7 @@ Options -Indexes
 # Установка индексного файла для директории
 DirectoryIndex app/main.php
 # Установка файла обработчика ошибки 404
-ErrorDocument 404 app/404.html
+ErrorDocument 404 /app/404.php
 
 
 # Включение mod_rewrite

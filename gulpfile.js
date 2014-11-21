@@ -6,12 +6,12 @@ var gulp = require('gulp'),
 
 // css
 gulp.task('css', function () {
-    livereload.changed();
+  livereload.changed();
 });
 
 // php
 gulp.task('php', function () {
-    livereload.changed();
+  livereload.changed();
 })
 
 // js
@@ -21,11 +21,11 @@ gulp.task('js', function () {
 
 // watch
 gulp.task('watch', function () {
-    livereload.listen();
-    opn('http://dz1_2710/app/');
-    gulp.watch('app/styles/*.css', ['css']);
-    gulp.watch('app/scripts/*.js', ['js']);
-    gulp.watch('app/*.php', ['php']);
+  livereload.listen();
+  opn('http://dz1_2710/');
+  gulp.watch('app/styles/*.css', ['css']);
+  gulp.watch('app/scripts/*.js', ['js']);
+  gulp.watch('app/*.php', ['php']);
 });
 
 // default

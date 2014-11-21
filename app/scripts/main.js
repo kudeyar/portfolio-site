@@ -36,7 +36,7 @@
         url: '/app/upload.php',
         dataType: 'json',
         success: function(ans){
-           var mes = ans.mes,
+          var mes = ans.mes,
                status = ans.status;
           if (status === 'OK') {
             inpFileName
@@ -84,7 +84,7 @@
               status = ans.status;
 
           if ( status === 'OK'){
-            form.find('.error-mes').text(mes).hide();
+            form.trigger('reset');
             form.find('.success-mes').text(mes).show();           
           } else{
             form.find('.error-mes').text(mes).show();
@@ -108,7 +108,7 @@
           var mes = ans.mes,
               status = ans.status;
           if ( status === 'OK'){
-            form.find('.error-mes').text(mes).hide();
+            form.trigger('reset');
             form.find('.success-mes').text(mes).show();
             window.location.href = '/';
           } else{
@@ -134,7 +134,7 @@
               status = ans.status;
 
           if ( status === 'OK'){
-            form.find('.error-mes').text(mes).hide();
+            form.trigger('reset');
             form.find('.success-mes').text(mes).show();
             // TODO: отрисовать новый элемент в DOM при помощи js шаблона
             location.reload(); // сразу перезагрузим страницу
