@@ -118,13 +118,13 @@ input, textarea, button {
   position: relative;
 }
 .fileupload-wrapper #fileupload {
-  opacity: 0;
   height: 100%;
   position: absolute;
   z-index: 99;
   right: 0;
+  margin-top: 4px;
 }
-.fileupload-wrapper .file:after {
+.fileupload-wrapper #fileupload:after {
   content: "";
   display: block;
   width: 52px;
@@ -132,7 +132,7 @@ input, textarea, button {
   background: url(../images/upload-icon.png) 10px 7px no-repeat;
   background-color: #48cbe8;
   position: absolute;
-  top: 0;
+  top: -4px;
   right: 0;
   border-radius: 0 4px 4px 0;
 }

@@ -8,6 +8,7 @@
 
       this.setUpListeners();
 
+      // TODO: only in ie
       $('input, textarea').placeholder();
     },
 
