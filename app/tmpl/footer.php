@@ -4,6 +4,15 @@
   <footer class="footer-page">
     <div class="gline"></div> <!-- gline - 2 пиксельная линия с градиентом. Можно сделать отдельным дивом или при помощи :after :before -->
     <div class="container">
+      <div class="lock-box">
+        <?php if($_SESSION['auth']): ?> 
+          <a href="/logout" class="lock lock-open">Выйти</a>
+          <p class="login-info">Вы вошли как <b><?php echo $_SESSION['login']; ?></b></p>
+        <?php else: ?>
+          <a href="/admin" class="lock lock-close">Войти</a>
+          <p class="login-info">Войти</p>
+        <?php endif; ?>
+      </div>
       <p class="copyright">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
     </div>
   </footer>

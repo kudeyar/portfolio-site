@@ -24,6 +24,20 @@ input, textarea, button {
 	font-size: 20px;
 	padding: 0px 24px;
 }
+.btn:active {
+	border-top: solid 2px #3ba8c0;	
+}
+.btn:hover {
+	border-bottom: none;
+}
+.btn-res{
+	background: #849db5;
+	border-color: #687b8f;
+}
+.btn-res:active {
+	border-top: solid 2px #687b8f;	
+}
+
 .input {
 	display: block;	
 	height: 41px;

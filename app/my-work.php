@@ -1,12 +1,12 @@
 <!-- Подключаем head и header -->
 <?php
-  include "tmpl/head.php";
-  include "tmpl/header.php";
+  require_once "tmpl/head.php";
+  require_once "tmpl/header.php";
 ?>  
   
 <!-- Подключаем сайдбар -->
 <?php
-  include "tmpl/sidebar.php";
+  require_once "tmpl/sidebar.php";
 ?>  
     
 <!-- Главная область -->
@@ -48,7 +48,7 @@
         </a>
       <?php
         // Подключаем модальное окно, только если пользователь авторизован
-        include "tmpl/popup-add-project.php";
+        require_once "tmpl/popup-add-project.php";
         endif;
       ?>
 
@@ -59,5 +59,5 @@
 
 <!-- Подключаем футер -->
 <?php
-  include "tmpl/footer.php";
+  require_once "tmpl/footer.php";
 ?> 

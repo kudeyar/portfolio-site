@@ -3,19 +3,18 @@
 	background: url(../images/icon-set.png) no-repeat;
 	display: inline-block;
 	width: 41px;
-	margin-bottom: 6px;
 }
 .icon-college{ background-position: 0 0; height: 23px; } 
 .icon-course{ background-position: 8px -73px; height: 32px; } 
-.icon-portfel{ background-position: 0 -155px; height: 30px; } 
+.icon-portfel{ background-position: 3px -150px; height: 35px; } 
 .about-me .photo{
 	float: left;
-	margin: 4px 32px 0 40px;
+	margin: 0 38px 0 22px;
 }
 .about-me .item{
-	padding: 0 0 0 70px;
+	padding: 0 0 0 62px;
 	margin-bottom: 23px;
-	margin-top: 9px;
+	margin-top: 12px;
 }
 .about-me .info-block{
 	display: inline-block;
@@ -32,13 +31,13 @@
 	margin: 0;
 }
 .about-me .dl-horizontal{
-	margin-top: 2px;
+	margin-bottom: 3px;
 }
 .dl-horizontal{
   color: #4a545d;
   line-height: 2.1;
   margin: 0;
-  width: 344px;
+  width: 370px;
   display: inline-block;
 }
 .dl-horizontal dt{
@@ -46,7 +45,7 @@
   font-size: 16px;
   float: left;
   clear: left;
-  margin-right: 10px;
+  margin-right: 24px;
 }
 .dl-horizontal dd{
   font-family: 'fira_sansbook'; 
@@ -57,7 +56,7 @@
   margin-left: 0;
 }
 .about-me .skills{
-	width: 188px;
+	width: 200px;
 	line-height: 2.0;
 }
 /* Градиент создан при помощи онлайн генератора */
@@ -71,14 +70,14 @@
 	background: -ms-linear-gradient(top,  #3ba8c0 0%,#3ba8c0 49%,#2e8ca2 50%,#2e8ca2 99%); /* IE10+ */
 	background: linear-gradient(to bottom,  #3ba8c0 0%,#3ba8c0 49%,#2e8ca2 50%,#2e8ca2 99%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 ); /* IE6-9 */
-	border-radius: 4px;
-	padding: 0 7px;
-	margin-right: 6px;
+	border-radius: 2px;
+	padding: 1px 14px;
+	margin-right: 4px;
 	color: white;
 	display: inline-block;
 	line-height: 1.2;
-	min-width: 40px;
 	text-align: center;
+	font-size: 14px;
 }
 
 

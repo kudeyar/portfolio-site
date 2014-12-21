@@ -1,8 +1,8 @@
 <!-- Подключаем head и header -->
 <?php
  	$data['title'] = 'Страницы не существует';
-  include "tmpl/head.php";
-  include "tmpl/header.php";
+  require_once "tmpl/head.php";
+  require_once "tmpl/header.php";
 ?>  
 
 <!-- Главный контейнер -->
@@ -14,5 +14,5 @@
 
 <!-- Подключаем футер -->
 <?php
-  include "tmpl/footer.php";
+  require_once "tmpl/footer.php";
 ?> 

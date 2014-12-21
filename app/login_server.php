@@ -16,8 +16,10 @@ $data = array();
 // Если пользователь есть в БД
 if($res['cnt'] == 1) {
     $_SESSION['auth'] = true;
+    $_SESSION['login'] = $login;
     $data['status'] = "OK";
     $data['mes'] = 'Добро пожаловать на сайт';
+
 } else {
     $data['status'] = "NO";
     $data['mes'] = 'Пользователя с таким логином / паролем нет в базе';

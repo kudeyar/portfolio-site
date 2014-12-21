@@ -27,6 +27,10 @@
       $data['title'] = 'Админка';
       require_once 'login.php';
       break;
+    // страница выхода
+    case 'logout':     	
+      require_once 'logout.php';
+      break;
     // выводим главную страницу
     default:
       $data['title'] = "Сайт веб-разработчика";

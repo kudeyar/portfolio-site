@@ -1,12 +1,12 @@
 <!-- Подключаем head и header -->
 <?php 
-  include "tmpl/head.php";
-  include "tmpl/header.php";
+  require_once "tmpl/head.php";
+  require_once "tmpl/header.php";
 ?>  
 
 <!-- Подключаем сайдбар -->
 <?php
-  include "tmpl/sidebar.php";
+  require_once "tmpl/sidebar.php";
 ?>  
     
 <!-- Главная область -->
@@ -55,5 +55,5 @@
 
 <!-- Подключаем футер -->
 <?php
-  include "tmpl/footer.php";
+  require_once "tmpl/footer.php";
 ?> 

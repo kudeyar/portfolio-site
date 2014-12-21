@@ -3,8 +3,8 @@
   Благодаря этому мы избегаем дублирование кода.
 -->
 <?php 
-  include "tmpl/head.php";
-  include "tmpl/header.php";
+  require_once "tmpl/head.php";
+  require_once "tmpl/header.php";
 ?>    
          
 <!-- 
@@ -12,7 +12,7 @@
   Сайдбар также одинаковый на всех страницах.
 -->
 <?php
-  include "tmpl/sidebar.php";
+  require_once "tmpl/sidebar.php";
 ?>
   
 <!-- 
@@ -22,7 +22,7 @@
 <div class="main about-me">  
   <!-- 1ый блок -->
   <section class="box">
-    <h2 class="h2">Основная информация</h2>
+    <h2 class="h2">Привет второй поток</h2>
     <div class="clearfix"></div> <!-- Очищаем флоат -->
     <img src="/app/images/face.png" alt="Фотография автора" class="photo">
     <dl class="dl-horizontal">
@@ -86,5 +86,5 @@
 
 <!-- Подключаем футер -->
 <?php
-  include "tmpl/footer.php";
+  require_once "tmpl/footer.php";
 ?> 

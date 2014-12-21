@@ -31,7 +31,7 @@ RewriteRule ^my-work/?$ app/main.php?page=my-work
 RewriteRule ^admin/?$ app/main.php?page=admin
 # с contact/ переправлять по URL app/main.php?page=contact
 RewriteRule ^contact/?$ app/main.php?page=contact
-
+RewriteRule ^logout/?$ app/main.php?page=logout
 
 
 # Запрет на доступ к папке node_modules
